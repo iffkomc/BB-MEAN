@@ -1,0 +1,26 @@
+<a ng-href="#/{{user.username}}" class="notification__photo">
+    <img ng-src="{{'/uploads/' + (user.avatarName || 'default') + '.jpg'}}" alt="" class="notification-photo__item"/>
+</a>
+
+<div class="notification__heading">
+    <h3 class="notification-heading__name">{{ user.name }} </h3>
+    <span class="notification-heading__text"> commented your </span>
+    <a ng-href="#/{{user.username + '/' + notify.status}}" class="notification-heading__link">photo</a>
+</div>
+<div class="notification__description">
+    <p class="notification-description__text">{{comment.text}}</p>
+</div>
+<a class="notification__settings">
+    <i class="dots"></i>
+</a>
+
+<div class="notification__panel">
+    <a class="notification-panel__reply"  ng-href="#/{{user.username + '/' + notify.status}}" >
+        <i class="reply"></i>
+    </a>
+    <a class="notification-panel__like comment-like" ng-click="likeComment()"  ng-class="{'active': (comment.likes.indexOf(notify.idOwner) > -1)}" >
+        <i class="like"></i>
+        <span class="notification-panel-like__counter">{{ comment.likes.length }}</span>
+    </a>
+    <span class="notification-panel__time">{{timeDifference.hours}} hours </span>
+</div>

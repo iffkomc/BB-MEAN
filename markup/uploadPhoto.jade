@@ -1,0 +1,44 @@
+- var location = ''
+- var images = location + 'svg'
+
+
+extends index
+block content
+    include includes/header
+    .main
+        .main-container.container
+            .main-content.upload-content.shadowed.container-max
+                .upload-page
+                    .upload__photo
+                        .upload-photo__inner
+                            img.upload-photo__photo(src="#{images}/new-photo.svg", alt="")
+                            a.upload-photo__action.upload-btn(href="") Add photo
+                    .upload__fields
+                        h2.upload-fields__heading Choose the way to show
+                        form.upload-fields-fill
+                            .upload-fields-fill__buttons.cf
+                                a.btn-uploadInfo.btn-uploadInfo_random(href="")
+                                    i.random
+                                    span Random
+                                a.btn-uploadInfo.btn-uploadInfo.btn-uploadInfo_friends(href="")
+                                    i.people
+                                    span Friends
+                            a.upload-photo__topic 
+                                | Topic
+                                i.arrow-down-triangle.upload-photo-topic__icon
+                                ul.upload-photo__chooseTopic
+                                    li.upload-photo__chooseTopicItem Поп
+                                    li.upload-photo__chooseTopicItem Рок
+                                    li.upload-photo__chooseTopicItem Металлик
+                            textarea#comment.upload-photo__comment(name="comment-area", cols="30", rows="10", placeholder="Comment...")
+                            .upload-buttons-submit.cf
+                                a.btn-upload.upload__price(href="") Price
+                                a.btn-upload.upload__start(href="") Start
+                            
+                                //.upload-buttons-priceEnter
+                                    i.dollar.upload-buttons-priceEnter__image
+                                    input.upload__price.btn-upload(type="text")
+                    
+
+    include includes/footer
+      

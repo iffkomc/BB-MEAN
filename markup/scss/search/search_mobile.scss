@@ -1,0 +1,25 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+@media only screen and (max-width: 480px) {
+    .search-box-body-header__params {
+        padding: 0 0 15px;
+    }
+    .message-action-place{
+        width: 25%;
+    }
+    .message-avatar-place{
+        width: 55px;
+    }
+    .popup .message__item .btn {
+        font-size: 0.9em;
+    }
+    .message-action-place {
+        width: 37%;
+    }
+    .message-action-place .btn {
+        padding: 5px 1px 7px;
+    }
+    .message__item{
+        padding: 5px 0;
+    }
+}

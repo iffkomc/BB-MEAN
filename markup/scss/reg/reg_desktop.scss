@@ -1,0 +1,195 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+.reg__global{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url(#{$imagesCssLvl2}/login.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+.reg__header{
+    padding: 10px 15px 10px 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    position: absolute;
+    background-color: #fff;
+}
+.reg-header__logo{
+    display: inline-block;
+    width: 70px;
+}
+.reg-header__logo img{
+    width: 100%;
+    height: auto;
+}
+.reg-header__about{
+    float: right;
+    margin-top: 7px;
+}
+
+.reg__info{
+    position: absolute;
+    font-family: JoannaSansNova;
+    background-image: url('#{$imagesCssLvl2}/restnic.png');
+    background-position: 0 0;
+    background-size: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 10px 0 40px 40px;
+    width: 400px;
+    min-height: 100px;
+    color: #fff;
+}
+.reg__info h2{
+    font-weight: normal;
+}
+.reg__info h2 img{
+    width: 100px;
+    height: auto;
+}
+.reg__info h2 small{
+    display: block;
+    margin-top: 10px;
+}
+.reg__info ul li:before{
+    content: '-';
+}
+
+.reg__box{
+    border-radius: 10px;
+    padding: 20px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -200px;
+    width: 400px;
+    min-height: 150px;
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+}
+
+.reg__box input{
+    width: 100%;
+    font-family: JoannaSansNova;
+    color: #D0D0D0;
+    display: block;
+    border: 1px solid #bdbdbd;
+    margin-bottom: 10px;
+    padding: 15px 15px 15px 40px;
+    border-radius: 6px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 11px 15px;
+}
+input[name="login"]{
+    background-image: url(#{$imagesCssLvl2}/reg-person.svg);
+}
+input[name="email"]{
+    background-image: url(#{$imagesCssLvl2}/email.svg);
+}
+.password-enter{
+    background-image: url(#{$imagesCssLvl2}/lock.svg);
+}
+.log__req.full-size{
+    float: none;
+    width: 100%;
+}
+.reg__box h1{
+    font-family: JoannaSansNovaThin, sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 0 30px;
+    
+}
+.reg__req{
+    margin-top: 40px;
+}
+
+.btn-reg{
+    display: inline-block;
+    text-align: center;
+    color: #aca59f;
+    border: 1px solid #aca59f;
+    background-color: transparent;
+    padding: 10px 20px;
+    width: 150px;
+    border-radius: 6px;
+    &:hover{
+        text-decoration: none;
+        color: #fff;
+        background-color: #2e9fce;
+        border-color: #2e9fce;
+    }
+}
+.btn-reg.active{
+    color: #fff;
+    background-color: #2e9fce;
+    border-color: #2e9fce;
+    
+}
+.log__req{
+   margin-top: 15px;
+}
+.log__social h4{
+    margin: 10px 0 15px;
+    font-size: 1.2em;
+    font-family: JoannaSansNovaThin, sans-serif;
+}
+.log__social li{
+    margin-right: 5px;
+}
+.log__social li a{
+    display: inline-block;
+}
+.log__req a{
+    margin-bottom: 10px;
+}
+.log__req, .log__social{
+    width: 50%;
+    float: left;
+}
+.log__social li{
+    float: left;
+}
+
+.reg__req > *:nth-of-type(2n-1){
+    float: left;
+}
+.reg__req > *:nth-of-type(2n){
+    float: right;
+}
+
+.reg__forgot a{
+    color: #adadac;
+}
+
+
+@media only all and (min-width: 990px){
+    .reg-header__login{
+        display: none;
+    }
+.reg__logo{
+    display: none;
+}
+.log__social h4 + h4{
+    display: none;
+}
+
+
+}
+@media all and (min-width: 1280px){
+
+}

@@ -1,0 +1,52 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+$browser-context: 18;
+.share-box__body{
+    font-size: 1.2em;
+}
+.popup-box.share-box{
+    border-radius: 10px;
+    color: #fff;
+    padding: 15px 20px;
+    width: 500px;
+    margin-left: -250px;
+    background-color: #24a2d3;
+}
+.share-box-body-body__sources{
+    margin-bottom: 5px;
+}    
+.share-box-body-body__heading{
+    font-family: JoannaSansNovaThin, sans-serif;
+    font-size: 35/16 *1em;
+    margin: 0 auto 25px;
+    text-align: center;
+}
+.share-box-body-body__sourceItem{
+    margin-bottom: 10px;
+}
+.share-box-body-body__sourceItem i{
+    vertical-align: middle;
+    margin-right: 15px;
+}
+.share-box-body-body__sourceItem a{
+    color: #fff;
+}
+.share-box__close{
+    color: #fff;
+    float: right;
+}
+.share-box-body-body__sourceItem i{
+    width: 2em;
+    height: 2em;
+}
+@media only all and (min-width: 990px) {
+ 
+    
+    .share-box__header{
+        display: none;
+    }
+    
+    
+    
+}
+@media all and (min-width: 1280px) {}

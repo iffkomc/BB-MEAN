@@ -1,0 +1,125 @@
+<div class="popup search">
+    <div class="popup-box search-box">
+        <div class="search-box__header">
+            <a href="" class="search-box-header__searchBtn" ng-click="isOpenSearch = true" ng-hide="isOpenSearch" ng-init="isOpenSearch = false"><i class="search"></i></a>
+            <input ng-show="isOpenSearch" ng-model="searchQuery" type="text"/>
+        </div>
+        <div class="search-box__body">
+            <div class="search-box-body__header shadowed">
+                <ul class="search-box-body-header__list cf">
+                    <li class="search-box-body-header-list__item" ng-init="isPeople = true" ng-click="isPeople = true; isOpenSearch = false; searchQuery=''" ng-class="{'active': isPeople == true}">
+                        <a href="" class="search-box-body-header-list-item__link">People</a>
+                    </li>
+                    <li class="search-box-body-header-list__item" ng-click="isPeople = false; isOpenSearch = false; searchQuery=''" ng-class="{'active': isPeople == false}">
+                        <a href="" class="search-box-body-header-list-item__link">Photos</a>
+                    </li>
+                </ul>
+                <div ng-show="isPeople" class="search-box-body-header__params cf">
+                    <div class="search-box-body-header-params__city">
+                        <label for="">
+                            <i class="search-box-body-header-params-city__icon"></i>
+                            <div class="search-box-body-header-params-city__wrap">
+                                <select type="text" placeholder="City" ng-model="filterCityValue" class="search-box-body-header-params-city__field">
+                                    <option value=""></option>
+                                    <option value="{{getObj(city).key}}" ng-repeat="city in locale.citiesList">{{getObj(city).value}}</option>
+                                </select>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="search-box-body-header-params__age">
+                        <label for="">
+                            <i class="search-box-body-header-params-age__icon"></i>
+                            <div class="search-box-body-header-params-city__wrap">
+                                <input type="text" ng-model="filterAgeValue" placeholder="Age" class="search-box-body-header-params-age__field"/>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div ng-hide="isPeople" class="search-box-body-header__params cf">
+                    <div class="search-box-body-header-params__brand">
+                        <i class="search-box-body-header-params-brand__icon"></i>
+                        <div class="search-box-body-header-params-brand__wrap">
+                            <div class="search-choose-brands">
+                                <div ng-repeat="chooseBrand in brandsArray">
+                                    <p>
+                                        {{chooseBrand.name}}
+                                        <span ng-click="deleteBrand($index)">x</span>
+                                    </p>
+                                </div>
+                                <div class="search-dropdown-brand">
+                                    <input type="text" placeholder="Brand" ng-model="filterBrand" class="search-box-body-header-params-brand__field"/>
+                                    <ul>
+                                        <li ng-repeat="brand in brands | filter : filterBrand" ng-click="addBrand($index)">{{brand.name}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-box-body-header-params__tag">
+                        <label for=""><i class="search-box-body-header-params-tag__icon"></i>
+                            <div class="search-box-body-header-params-tag__wrap">
+                                <input type="text" disabled placeholder="Tag" class="search-box-body-header-params-tag__field"/>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="search-box-body__body">
+                <div ng-show="isPeople" class="search-box-body-body__people">
+                    <div class="message__item" ng-repeat="user in users | filterCity : filterCityValue | filterAge : filterAgeValue | findInByQuery : searchQuery">
+                        <div class="message-avatar-place">
+                            <a ui-sref="user({user: user.username})" class="search-box-body-body__avatarLink">
+                                <img ng-src="/uploads/{{ user.avatarName || 'default' }}.jpg"  alt="" class="message-avatar__item search-box-body-body__avatarLink-avatar"/>
+                            </a>
+                        </div>
+                        <div class="message-text-place">
+                            <a ui-sref="user({user: user.username})" class="search-text-bold">{{ user.name  || user.username }}</a>
+                        </div>
+                        <div class="message-action-place">
+
+                            <a ng-click="follow(user)" class="btn btn-blue btn-active" ng-show="user.followers.indexOf(userOwner.username) < 0">Follow</a>
+                            <a ng-click="follow(user)" class="btn btn-blue" ng-hide="user.followers.indexOf(userOwner.username) < 0">Followed</a>
+                            <!--<a href="" class="btn btn-blue">Follow</a>-->
+                        </div>
+                    </div>
+                </div>
+                <div ng-hide="isPeople" class="search-box-body-body__photos cf">
+                    <div class="cf" ng-if="$index % 2 == 0" ng-repeat="photo in photos  | findInByQuery : searchQuery:true | filterBrand : brandsArray">
+                        <div class="search-box-body-body-photos__item">
+                            <div class="search-box-body-body-photos-item__inner shadowed">
+                                <img   ui-sref="user.openPhoto({user: photo.user.username, photoId: photo._id})"  ng-src="/uploads/photos/{{ photo.name }}.jpg" alt="" class="search-box-body-body-photos-item__photo"/>
+                                <div class="search-box-body-body-photos-item__caption">
+                                    <a  ui-sref="user({user: photo.user.username})"  class="search-box-body-body-photos-item-caption__avatar">
+                                        <img ng-src="/uploads/{{ photo.user.avatarName || 'default' }}.jpg" alt="" class="search-box-body-body-photos-item-caption-avatar-image"/>
+                                    </a>
+                                    <a ui-sref="user({user: photo.user.username})" class="search-box-body-body-photos-item-caption__name">
+                                        <span>{{ photo.user.name  || photo.user.username }}</span>
+                                    </a>
+                                    <a class="search-box-body-body-photos-item-caption__action"  ui-sref="user.openPhoto({user: photo.user.username, photoId: photo._id})">
+                                        <i class="search-box-people-discuss"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-box-body-body-photos__item">
+                            <div class="search-box-body-body-photos-item__inner shadowed" ng-if="photos.length > ($index + 1)">
+                                <img   ui-sref="user.openPhoto({user: photos[$index + 1].user.username, photoId: photos[$index + 1]._id})"  ng-src="/uploads/photos/{{ photos[$index + 1].name }}.jpg" alt="" class="search-box-body-body-photos-item__photo"/>
+                                <div class="search-box-body-body-photos-item__caption">
+                                    <a  ui-sref="user({user: photos[$index + 1].user.username})"  class="search-box-body-body-photos-item-caption__avatar">
+                                        <img ng-src="/uploads/{{ photos[$index + 1].user.avatarName || 'default' }}.jpg" alt="" class="search-box-body-body-photos-item-caption-avatar-image"/>
+                                    </a>
+                                    <a ui-sref="user({user: photos[$index + 1].user.username})" class="search-box-body-body-photos-item-caption__name">
+                                        <span>{{ photos[$index + 1].user.name  || photos[$index + 1].user.username }}</span>
+                                    </a>
+                                    <a class="search-box-body-body-photos-item-caption__action"  ui-sref="user.openPhoto({user: photos[$index + 1].user.username, photoId: photos[$index + 1]._id})">
+                                        <i class="search-box-people-discuss"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

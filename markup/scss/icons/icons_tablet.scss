@@ -1,0 +1,35 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+
+@media only screen and (max-width : 989px) {
+  $browser-context: 25;
+  i.search {
+    background: url('#{$imagesCssLvl2}/search-m.svg') no-repeat center center;
+  }
+  i.settings {
+    background: url('#{$imagesCssLvl2}/settings-m.svg') no-repeat center center;
+    width: em(36);
+    height: em(36);
+    position: static;
+  }
+  i.logo {
+    background: url('#{$imagesCssLvl2}/logo-m.svg') no-repeat center center;
+  }    
+    i.battle-icon-discuss{
+        background-image: url('#{$imagesCssLvl2}/battle-icon-discuss-mobile.svg');
+        width: 30px;
+        height: 30px;
+        
+    }
+    i.battle-icon-price{
+        background-image: url('#{$imagesCssLvl2}/battle-icon-label-mobile.svg');
+        width: 30px;
+        height: 30px;
+        
+    }
+    i.battle-icon-reply{
+        background-image: url('#{$imagesCssLvl2}/battle-reply.svg');
+    }
+
+}

@@ -1,0 +1,151 @@
+- var location = ''
+- var images = location + 'svg'
+
+
+extends index
+
+block content
+    script $(document).ready(function(){$('body').addClass('mainPage');});
+    include includes/header
+    .main
+        .main-container.container
+            .popup.openPhoto
+                    .popup-box.openPhoto-box
+                        .openPhoto__photoBox
+                            a.settings(href="")
+                                i.dots
+                            ul.openPhoto-photoBox__photos
+                                li
+                                    img(src="#{images}/photo1.jpg", alt="")
+                                    .photoBox__counters
+                                        .photoBox-counters__win
+                                        .photoBox-counters__views
+                                        .photoBox-counters__likes
+                                li
+                                    img(src="#{images}/photo1.jpg", alt="")
+                                    .photoBox__counters
+                                        .photoBox-counters__win
+                                        .photoBox-counters__views
+                                        .photoBox-counters__likes
+                            .openPhoto-photoBox__controls
+                                a.photoBox-control__left(href="")
+                                    i.arrow-left-wide
+                                a.photoBox-control__right(href="")
+                                    i.arrow-right-wide
+                                        
+                        .openPhoto__commentsBox
+                            .openPhoto-commentsBox__item
+                                .openPhoto-commentsBox-item__avatar
+                                .openPhoto-commentsBox-item__text
+                                .openPhoto-commentsBox-item__setting
+                                .openPhoto-commentsBox-item__remain
+                                .openPhoto-commentsBox-item__likereply
+                        .openPhoto__writeComment
+                            .openPhoto-writeComment__item
+                                .openPhoto-writeComment-item__avatar
+                                .openPhoto-writeComment-item__text
+
+
+
+
+                                    
+                                
+
+
+            .main-header.battle-main-header
+                ul.main-popular-friends
+                    li.main-popular-friends__item
+                        a.main-popular-friends-item__link(href="")
+                            img(src="#{images}/70x70.jpg", alt="")
+                            p Virgil Abloh
+                    li.main-popular-friends__item
+                        a.main-popular-friends-item__link(href="")
+                            img(src="#{images}/70x70.jpg", alt="")
+                            p Virgil Abloh
+                    li.main-popular-friends__item
+                        a.main-popular-friends-item__link(href="")
+                            img(src="#{images}/70x70.jpg", alt="")
+                            p Virgil Abloh
+                    li.main-popular-friends__item
+                        a.main-popular-friends-item__link(href="")
+                            img(src="#{images}/70x70.jpg", alt="")
+                            p Virgil Abloh
+                .main-header__nav
+                    .main-header-nav__wrap
+                        ul.main-header-nav__list.main-page-header__nav.cf.shadowed
+                            li.main-header-nav-list__item.active
+                                a.main-header-nav-list-item__link(href="")
+                                    i.dollar.main-header-nav-list-item-link__icon
+                                    span.main-header-nav-list-item-link__heading Price
+                            li.main-header-nav-list__item.active
+                                a.main-header-nav-list-item__link(href="")
+                                    i.eye.main-header-nav-list-item-link__icon
+                                    span.main-header-nav-list-item-link__heading Views
+                            li.main-header-nav-list__item.active
+                                a.main-header-nav-list-item__link(href="")
+                                    i.like-m.main-header-nav-list-item-link__icon
+                                    span.main-header-nav-list-item-link__heading Favourites
+                            li.main-header-nav-list__item.active
+                                a.main-header-nav-list-item__link(href="")
+                                    i.people.main-header-nav-list-item-link__icon
+                                    span.main-header-nav-list-item-link__heading Friends
+                    a.btn-big.btn-donate.shadowed Donate
+            .main-content.shadowed.container-max
+                    .battle-box.cf
+                        .battle-photo.battle-photo_first
+                            .battle-photo-item__box
+                                .battle-photo-item-box__inner
+                                    a.battle-photo-item-box__reply(href="")
+                                        i.battle-icon-reply
+                                    a.battle-photo-item-box__price(href="")
+                                        i.battle-icon-price
+                                    a.battle-photo-item-box__discuss(href="")
+                                        i.battle-icon-discuss
+                            a.battle-photo-item__author(href="")
+                                img.battle-photo-item-author__avatar(src="#{images}/70x70.jpg", alt="")
+                                h3.battle-photo-item-author__heading Virgil Abloh
+                            img.battle-photo-item(src="#{images}/virgil.jpg", alt="")
+                        .battle-photo.battle-photo_second
+                            .battle-photo-item__box
+                                .battle-photo-item-box__inner
+                                    a.battle-photo-item-box__reply
+                                        i.battle-icon-reply
+                                    a.battle-photo-item-box__price
+                                        i.battle-icon-price
+                                    a.battle-photo-item-box__discuss
+                                        i.battle-icon-discuss
+                            a.battle-photo-item__author(href="")
+                                img.battle-photo-item-author__avatar(src="#{images}/70x70.jpg", alt="")
+                                h3.battle-photo-item-author__heading Virgil Abloh
+                            img.battle-photo-item(src="#{images}/virgil.jpg", alt="")
+                        .battle-mobile-rate
+                            .battle-mobile-rate_wrap
+                                a.battle-mobile-rate__item
+                                    i.battle-arrow-wide
+                            .battle-mobile-rate_wrap
+                                a.battle-mobile-rate__item
+                                    i.battle-arrow-wide
+                        .battle-info
+                            .battle-info-price.cf
+                                h3.battle-info-price__heading     Price of the look
+                                .battle-info-price__box
+                                    .battle-info-price-box__inner.cf
+                                        a.battle-info-price__item(href="")
+                                            span $500
+                                        a.battle-info-price__item(href="")
+                                            span $500
+                            .battle-info-choose.cf
+                                .btn-rounded.btn-blue.rateBtn.rateLeft.btn-active
+                                    i.arrowLeft
+                                span vs
+                                .btn-rounded.btn-blue.rateBtn.rateRight
+                                    i.arrowRight
+                            .battle-info-counters.cf
+                                .battle-info-counters__looks
+                                    i.eye
+                                    span 1500
+                                .battle-info-counters__remain
+                                    i.time
+                                    span 11:34
+    include includes/footer
+      

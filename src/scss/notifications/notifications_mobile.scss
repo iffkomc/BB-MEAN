@@ -1,0 +1,57 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (min-width : 320px) and (max-width : 480px){
+/* Styles */
+  $browser-context: 20;
+  .notification__description{
+    padding-top: em(6);
+  }
+  .notification__description, .notification__panel, .notification__heading{
+    padding-left: 66px;
+  }
+  .notifications__item_follow .notification__description{
+    padding-left: 66px;
+  }
+  .notifications__item_voted .notification__description{
+      padding-right: 70px;
+  }
+  .notification__request_accept.btn.btn-vc span{
+    position: relative;
+    top: -4px;
+  }
+  .notification__request_accept.btn span, .notification__request_decline.btn span{
+    position: relative;
+    top: -2px;
+  }
+}
+
+/* R E T I N A */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (-webkit-min-device-pixel-ratio : 2){
+/* Styles */
+  $browser-context: 20;
+  .notification__description{
+    padding-top: em(6);
+  }
+  .notification__description, .notification__panel, .notification__heading{
+    padding-left: 66px;
+  }
+  .notification__request_accept span, .notification__request_decline span{
+    vertical-align: bottom;
+  }
+  .notification__follow.btn-vc:not(.btn-active) {
+    padding: 0.4em 0 0.5em;
+  }
+}
+
+@media only screen and (max-device-width : 480px) and (-webkit-min-device-pixel-ratio : 1){
+  .notification__follow.btn-vc{
+    padding: 0.2em 0 0.3em;
+  }
+  .notification__follow.btn-vc:not(.btn-active) {
+    padding: 0.3em 0 0.5em;
+  }
+
+}

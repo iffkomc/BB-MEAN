@@ -1,0 +1,226 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+.openPhoto i{
+    width: 1.7em;
+    height: 1.7em;
+}
+
+.popup-box.openPhoto-box {
+    background: transparent;
+}
+.openPhoto-box__body {
+    margin-bottom: 10px;
+    background: #fff;
+}
+.openPhoto-box__newComment {
+    margin-bottom: 10px;
+    background: #fff;
+}
+.openPhoto-box-wrap{
+    padding: 14px 20px 19px 15px;
+}
+.openPhoto-comment{
+	padding-bottom: 2.8em;
+}
+.openPhoto-comment-avatar {
+    float: left;
+    margin-right: 4px;
+}
+.openPhoto-comment-avatar a {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 1px solid #eef3f8;
+}
+.openPhoto-comment-avatar a img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    vertical-align: middle;
+}
+.openPhoto-comment-body {
+    padding-left: 65px;
+    width: 100%;
+}
+.openPhoto-comment-wrap{
+    position: relative;
+}
+.openPhoto-comment-btns{
+	position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+.comment-reply, .comment-like{
+	display: inline-block;
+	padding: 0.2em 0.5em;
+	vertical-align: middle;
+	text-decoration: none;
+	&:hover {
+    	text-decoration: none;
+    }
+}
+.comment-reply i, .comment-like i{
+	vertical-align: middle;
+}
+.comment-reply span, .comment-like span{
+	vertical-align: middle;
+	margin-left: 0.2em;
+    color: #383838;
+    font-family: 'MyriadPro';
+}
+.openPhoto-comment-time{
+	position: absolute;
+    bottom: 0;
+    right: 0;
+
+    font-family: 'MyriadPro';
+    color: #7e7e7e;
+}
+.openPhoto-comment-settings{
+	position: absolute;
+    top: 0;
+    right: 0;
+}
+.openPhoto-comment-settings a, .openPhoto-box-body-settings{
+    display: inline-block;
+}
+.openPhoto-comment-settings i, .openPhoto-box-body-settings i{
+    width: 1.2em;
+    height: 1.2em;
+}
+.newComment-form {
+    border: 1px solid #b9b9b9;
+    position: relative;
+    height: 76px;
+    width: 100%;
+}
+.newComment-field {
+    border-right: 1px solid #b9b9b9;
+    resize: none;
+    position: absolute;
+    display: block;
+    width: 93%;
+    height: 100%;
+    border: none;
+    height: 100%;
+    color: #484747;
+    padding: 7px 10px
+}
+.openPhoto-box__comment {
+    margin-bottom: 10px;
+    background: #fff;
+}
+.newComment-submit {
+    position: absolute;
+    width: 7%;
+    height: 100%;
+    border-left: 1px solid #b9b9b9;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 8px;
+}
+.newComment-submit i {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.openPhoto-comment p{
+	margin: 0.2em 1.8em 0.4em 0;
+}
+.openPhoto-box-body-head{
+    position: relative;
+    height: 40px;
+}
+.openPhoto-box-body-settings{
+    position: absolute;
+    right: 20px;
+    top: 9px;
+}
+.openPhoto-box-body-footer{
+    height: 82px;
+}
+.openPhoto-box-body-footer-buttons{
+    padding-top: 30px;
+    width: 300px;
+    margin: 0 auto;
+}
+.openPhoto-box-body-footer-buttons-item{
+    float: left;
+    width: 33%;
+    &:nth-of-type(1){
+        text-align: left;
+    }
+    &:nth-of-type(2){
+        text-align: center;
+    }
+    &:nth-of-type(3){
+        text-align: right;
+    }
+}
+.openPhoto-box-body-footer-buttons-item a{
+    display: block;
+        text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+.openPhoto-box-body-footer-buttons-item a i{
+    vertical-align: middle;
+}
+.openPhoto-box-body-footer-buttons-item a span{
+    vertical-align: middle;
+    font-family: 'MyriadPro';
+    color: #383838;
+    margin-left: 8px;
+}
+.openPhoto-slider-controls-left, .openPhoto-slider-controls-right{
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    padding: 65px;
+    top: 0;
+    left: 0;
+}
+.openPhoto-slider-controls-right{
+    left: auto;
+    right: 0;
+}
+.openPhoto-slider-controls-left i, .openPhoto-slider-controls-right i{
+    vertical-align: middle;
+    display: inline-block;
+    height: 100%;
+}
+.openPhoto-slider{
+    position: relative;
+    overflow: hidden;
+}
+.burbl-slider{
+    width: 9999px;
+    position: relative;
+    //left: -150px;
+    top: 0;
+    bottom: 0;
+}
+
+.burbl-slider-item{
+    opacity: 0.3;
+}
+.burbl-slider-item.active{
+    opacity: 1;
+}
+.burbl-slider-item{
+    padding: 0 20px;
+    float: left;
+}
+
+
+
+@media only all and (min-width: 990px) {
+}
+
+@media all and (min-width: 1280px) {}

@@ -1,0 +1,52 @@
+extends index
+block content
+    script $(document).ready(function(){$('body').addClass('settings');});
+    include includes/header
+    .main
+        .main-container.container
+            .main-content.shadowed.container-max
+                .settings-edit.settings-box.cf
+                    .settings-fields
+                        h2 Settings
+                        .box
+                            .settings-fields__name
+                                i.person-m
+                                input(type="text" placeholder="Name and surname")
+                            .settings-fields__login
+                                i.person-m
+                                input(type="text" placeholder="Username")
+                            .settings-fields__email
+                                i.email
+                                input(type="text" placeholder="Email")
+                            .settings-fields__password
+                                i.lock
+                                input(type="password" placeholder="Password")
+                    
+                    .information-fields
+                        h2 Information
+                        .box
+                            .information-fields__date
+                                i.calend
+                                span
+                                    | Date of birth: 
+                                    input(type="text" value="11")
+                                    input(type="text" value="09")
+                                    input(type="text" value="96")
+                            .information-fields__city
+                                div
+                                    i.city
+                                    span 
+                                        | City:
+                                select
+                                    option(value="kiev") Kiev
+                                    option(value="lviv") Lviv
+                                    option(value="odessa") Odessa
+                                    option(value="donetsk") Donetsk
+                                    option(value="kharkov") Kharkov
+                            .information-fields__about.edit-aboutMe
+                                i.person-m
+                                textarea(name="", cols="30", rows="10" placeholder="About me")
+                        .text-center-mobile 
+                            a.btn-settings(href="") Apply
+    include includes/footer
+      

@@ -1,0 +1,112 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+$browser-context: 18;
+//div{
+//  -webkit-transition: all 1s ease;
+//  -moz-transition: all 1s ease;
+//  -ms-transition: all 1s ease;
+//  -o-transition: all 1s ease;
+//  transition: all 1s ease;
+//}
+.donate-text {
+  padding: em(38) em(38) em(33);
+  color: #5c5c5c;
+  font-size: em(18);
+  font-family: 'JoannaSansNovaMT';
+}
+
+.donate-image {
+  margin-right: em(48);
+  float: right;
+  width: 190px;
+  height: 190px;
+}
+
+.donate-description {
+  display: inline-block;
+  width: 50%;
+  margin-top: em(15);
+}
+
+.donate-btn {
+  color: #fff;
+  background-color: #28bd8b;
+  display: block;
+  padding: em(6) 0 em(9);
+  text-align: center;
+  text-decoration: none;
+  font-family: 'JoannaSansNovaBook';
+  font-size: em(25);
+  &:hover {
+    text-decoration: none;
+    background: #12A070;
+  }
+}
+
+
+.welcome-head, .welcome-body {
+  float: left;
+}
+
+.welcome-head {
+  text-align: center;
+  width: 60%;
+  background-color: #fff;
+}
+
+.welcome-head img {
+  width: 85%;
+  padding-bottom: 40px;
+}
+
+.welcome-head h2 {
+  margin-top: 35px;
+  margin-bottom: 85px;
+  font-family: 'JoannaSansNovaThin';
+  font-size: 2em;
+  font-weight: normal;
+}
+
+.welcome-head h2 strong {
+  font-family: 'JoannaSansNovaThin';
+  font-weight: normal;
+  color: #10a5d8;
+}
+
+.welcome-body {
+  text-align: center;
+  padding: 40px 20px;
+  width: 40%;
+  background-color: #10a5d8;
+}
+
+.welcome-body img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+.welcome-top{
+  display: none;
+}
+
+.welcome-body p {
+  margin: 0;
+  font-family: 'JoannaSansNovaBook';
+  font-size: 1.1em;
+  color: #ffffff;
+  margin-bottom: 35px;
+}
+
+.welcome-body .btn {
+  border: 2px solid #fff;
+  background-color: transparent;
+  border-radius: 11px;
+  padding: 5px 7px;
+  width: auto;
+  font-size: 1em;
+  &:hover, &:focus{
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #10a5d8;
+  }
+}

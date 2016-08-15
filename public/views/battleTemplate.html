@@ -1,0 +1,149 @@
+<div class="battle-photo battle-photo_first">
+    <div class="battle-photo-item__box">
+        <div class="battle-photo-item-box__inner" ng-init="showBrands1 = false">
+            <a ui-sref="{{currentState}}.openPhoto({photoId: photo1._id})" class="battle-photo-item-box__reply">
+                <i class="battle-icon-reply"></i>
+            </a>
+            <a href="" class="battle-photo-item-box__price" ng-click="showBrands1 = !showBrands1">
+                <i class="battle-icon-price"></i>
+            </a>
+            <a ui-sref="{{currentState}}.openPhoto({photoId: photo1._id})" class="battle-photo-item-box__discuss">
+                <i class="battle-icon-discuss"></i>
+            </a>
+        </div>
+    </div>
+    <a ng-href="#/{{battle.user1.username}}" class="battle-photo-item__author">
+        <img ng-src="{{'/uploads/' +  (battle.user1.avatarName || 'default') + '.jpg'}}" alt="" class="battle-photo-item-author__avatar"/>
+
+        <h3 class="battle-photo-item-author__heading">{{ battle.user1.name || battle.user1.username }} </h3>
+    </a>
+    <a ui-sref="{{currentState}}.openPhoto({photoId: photo1._id})" class="battle-photo-link-item">
+        <div class="battle-photo-link-item__overlay  photo-inner-brands" ng-show="showBrands1">
+
+        </div>
+        <img ng-src="{{'/uploads/photos/' + photo1.name + '.jpg'}}" alt="" class="battle-photo-item"/>
+    </a>
+</div>
+<div class="battle-info">
+    <div class="battle-info-price cf">
+        <h3 class="battle-info-price__heading"> Price of the look</h3>
+
+        <div class="battle-info-price__box">
+            <div class="battle-info-price-box__inner cf">
+                <a href="" class="battle-info-price__item">
+                    <span>{{'$' + photo1.price}}</span>
+                </a>
+                <a href="" class="battle-info-price__item">
+                    <span>{{'$' + photo2.price}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="battle-info-choose-complete cf" ng-show="battleStatus">
+        <div class="battle-info-choose-complete__result">
+            <div class="battle-info-choose-complete-result__wrapper">
+                <div class="battle-info-choose-complete-result__item battle-result__first">{{ battle.rateIdsPhoto1.length }}</div>
+                <div class="battle-info-choose-complete-result__item battle-result__second">{{ battle.rateIdsPhoto2.length }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="battle-info-choose cf" ng-hide="battleStatus">
+        <div class="btn-rounded btn-blue rateBtn rateLeft btn-active" ng-click="vote(1)">
+            <i class="arrowLeft"></i>
+        </div>
+        <span>vs</span>
+
+        <div class="btn-rounded btn-blue rateBtn rateRight btn-active" ng-click="vote(2)">
+            <i class="arrowRight"></i>
+        </div>
+    </div>
+    <div class="battle-info-counters cf">
+        <div class="battle-info-counters__looks">
+            <i class="eye"></i>
+            <span>{{battle.viewsIds.length}}</span>
+        </div>
+        <div class="battle-info-counters__remain">
+            <i class="time"></i>
+            <span>{{timeDifference.hours + ':' + timeDifference.minutes}}</span>
+        </div>
+    </div>
+</div>
+<div class="battle-photo battle-photo_second">
+    <div class="battle-photo-item__box">
+        <div class="battle-photo-item-box__inner" ng-init="showBrands2 = false">
+            <a ui-sref="{{currentState}}.openPhoto({photoId: photo1._id})"  class="battle-photo-item-box__reply">
+                <i class="battle-icon-reply"></i>
+            </a>
+            <a class="battle-photo-item-box__price" ng-click="showBrands2 = !showBrands2">
+                <i class="battle-icon-price"></i>
+            </a>
+            <a ui-sref="{{currentState}}.openPhoto({photoId: photo2._id})" class="battle-photo-item-box__discuss">
+                <i class="battle-icon-discuss"></i>
+            </a>
+        </div>
+    </div>
+    <a ng-href="#/{{battle.user2.username}}" class="battle-photo-item__author">
+        <img ng-src="{{'/uploads/' +  (battle.user2.avatarName || 'default') + '.jpg'}}" alt="" class="battle-photo-item-author__avatar"/>
+
+        <h3 class="battle-photo-item-author__heading">{{ battle.user2.name || battle.user2.username }} </h3>
+    </a>
+    <a ui-sref="{{currentState}}.openPhoto({photoId: photo2._id})" class="battle-photo-link-item">
+        <div class="battle-photo-link-item__overlay photo-inner-brands" ng-show="showBrands2">
+
+        </div>
+        <img ng-src="{{'/uploads/photos/' + photo2.name + '.jpg'}}" alt="" class="battle-photo-item"/>
+    </a>
+</div>
+<div class="battle-mobile-rate" ng-show="!battleStatus">
+    <div class="battle-mobile-rate_wrap">
+        <a class="battle-mobile-rate__item" ng-click="vote(1)">
+            <i class="battle-arrow-wide"></i>
+        </a>
+    </div>
+    <div class="battle-mobile-rate_wrap">
+        <a class="battle-mobile-rate__item" ng-click="vote(2)">
+            <i class="battle-arrow-wide"></i>
+        </a>
+    </div>
+</div>
+<div class="battle-mobile-rate battle-mobile-result" ng-show="battleStatus">
+    <div class="battle-result__first">{{ battle.rateIdsPhoto1.length }}</div>
+    <div class="battle-result__second">{{ battle.rateIdsPhoto2.length }}</div>
+</div>
+<div class="battle-info">
+    <div class="battle-info-price cf">
+        <h3 class="battle-info-price__heading"> Price of the look</h3>
+
+        <div class="battle-info-price__box">
+            <div class="battle-info-price-box__inner cf">
+                <a href="" class="battle-info-price__item">
+                    <span>{{'$' + photo1.price}}</span>
+                </a>
+                <a href="" class="battle-info-price__item">
+                    <span>{{'$' + photo2.price}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="battle-info-choose cf">
+        <div class="btn-rounded btn-blue rateBtn rateLeft btn-active">
+            <i class="arrowLeft"></i>
+        </div>
+        <span>vs</span>
+
+        <div class="btn-rounded btn-blue rateBtn rateRight">
+            <i class="arrowRight"></i>
+        </div>
+    </div>
+    <div class="battle-info-counters cf">
+        <div class="battle-info-counters__looks">
+            <i class="eye"></i>
+            <span>{{battle.viewsIds.length}}</span>
+        </div>
+        <div class="battle-info-counters__remain">
+            <i class="time"></i>
+            <span>{{timeDifference.hours + ':' + timeDifference.minutes}}</span>
+        </div>
+    </div>
+</div>

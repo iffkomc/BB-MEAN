@@ -1,0 +1,36 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+$browser-context: 18;
+
+.donate-text{
+  padding: em(38) em(38) em(33);
+  color: #5c5c5c;
+  font-size: em(18);
+  font-family: 'JoannaSansNovaMT';
+}
+.donate-image{
+  margin-right: em(48);
+  float: right;
+  width: 190px;
+  height: 190px;
+}
+.donate-description{
+  display: inline-block;
+  width: 50%;
+  margin-top: em(15);
+}
+.donate-btn{
+  color: #fff;
+  background-color: #28bd8b;
+  display: block;
+  padding: em(6) 0 em(9);
+  text-align: center;
+  text-decoration: none;
+  font-family: 'JoannaSansNovaBook';
+  font-size: em(25);
+  &:hover{
+    text-decoration: none;
+    background: #12A070;
+  }
+}

@@ -1,0 +1,54 @@
+@import "../../../scss/_variables";
+@import "../../../scss/_functions";
+
+/*
+MAIN START START
+*/
+
+
+.main{
+  margin-top: em(16);
+}
+.main-container{
+  max-width: 990px;
+  width: 80%;
+}
+.main-header{
+  background-color: #fff;
+}
+.main-header__nav{
+  display: table;
+  width: 100%;
+  text-align: justify;
+  list-style: none;
+}
+.main-header__item{
+  display: table-cell;
+  font-family: MyriadPro;
+  font-weight: bold;
+}
+.main-header-item__link{
+  display: block;
+  padding: em(13) 0 em(14);
+  text-align: center;
+  text-decoration: none;
+  color: #b6b6b6;
+}
+.main-header-item__link i{
+  display: inline-block;
+}
+.main-header-item__heading{
+  display: inline-block;
+  padding-left: em(11);
+  vertical-align: top;
+  margin-top: em(8);
+}
+
+@media only all and (min-width: 989px){
+  .main-header{
+    font-size: 15/18 * 1em;
+  }
+}
+@media all and (min-width: 1280px){
+
+}

@@ -1,0 +1,10 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+@media only screen and (max-width: 480px) {
+    .share-box__body{
+        margin-top: 10px;
+    }
+    .share-box-body__body{
+        padding: 5px 15px;
+    }
+}

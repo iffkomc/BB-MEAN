@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="fileUpload">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="angular.js"></script>
+	<script src="ng-file-upload.js"></script>
+	<script>
+		var app = angular.module('fileUpload', ['ngFileUpload']);
+ 
+		app.controller('MyCtrl', ['$scope', 'Upload', function ($scope, Upload) {
+		    // upload later on form submit or something similar 
+		    $scope.submit = function() {
+		      if ($scope.form.file.$valid && $scope.file) {
+		        $scope.upload($scope.file);
+		      }
+		    };
+		 
+		    // upload on file select or drop 
+		    $scope.upload = function (file) {
+		        Upload.upload({
+		            url: '/upload',
+		            data: {file: file, 'username': $scope.username}
+		        }).then(function (resp) {
+		            console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
+		        }, function (resp) {
+		            console.log('Error status: ' + resp.status);
+		        }, function (evt) {
+		            var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+		            console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
+		        });
+		    };
+		}]);
+	</script>
+</head>
+<body ng-controller="MyCtrl">
+	<form action="/upload" method="post" enctype="multipart/form-data">
+		<input type="file" name="upload">
+		<input type="submit">
+	</form>
+
+	<input type="file"
+  ngf-select="upload($files)" // called when files are selected or cleared
+  ngf-change="upload($files, $file, $newFiles, $duplicateFiles, $invalidFiles, $event)"
+  ng-model="myFiles" 
+  ngf-resize="{type: 'image/jpeg', centerCrop: true}" 
+  />
+ 
+>Upload/Drop</div>
+ 
+<div>File Drag/drop is not supported</div>
+ 
+// filter to convert the file to base64 data url.
+<a href="file">image</a>
+</body>
+</html>

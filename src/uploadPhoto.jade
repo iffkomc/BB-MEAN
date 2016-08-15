@@ -1,0 +1,52 @@
+- var location = ''
+- var images = location + '../img'
+
+script $(document).ready(function(){$('body').removeClass('non-avatar').removeClass('profile');});
+//include includes/header
+.upload-progress-bar()
+    .upload-progress-ready
+.main(style="margin-top: 0")
+    .main-container.container
+        .main-content.upload-content.shadowed.container-max
+            div(popup="uploadCtrl.profile.followings", open-popup="showPopup", friend="uploadCtrl.battleForm.type")
+            <div ui-view></div>
+            .upload-page
+                .upload__photo
+                    img(ngf-src="avatar", touch-input, brands="uploadCtrl.battleForm.brands", ng-show="isAddedPhoto")
+                    .upload-photo__inner(ng-hide="isAddedPhoto")
+                        img.upload-photo__photo(src="#{images}/new-photo.svg", alt="")
+                        a.upload-photo__action.upload-btn(href="" ng-model="file", name="file", ngf-fix-orientation="true", ngf-select="upload($files)", ngf-change="upload($files, $file, $newFiles, $duplicateFiles, $invalidFiles, $event)", ngf-resize="{type: 'image/jpeg', quality: 1, width: 800, height: 1200, centerCrop: true}") Add photo
+                        
+
+                .upload__fields
+                    h2.upload-fields__heading Choose the way to show
+                    form.upload-fields-fill
+                        .upload-fields-fill__buttons.cf(ng-init="isRandomType = false", bb-change-text)
+                            a.btn-uploadInfo.btn-uploadInfo_random(href="", ng-init="uploadCtrl.battleForm.type=false", ng-class="{ 'btn-active': uploadCtrl.battleForm.type == false }", ng-click="isRandom = true; uploadCtrl.battleForm.type=false")
+                                i.random
+                                span Random
+                            a.btn-uploadInfo.btn-uploadInfo.btn-uploadInfo_friends(href="", ng-click="showPopup('upload'); isRandom=false" ng-class="{'btn-active': uploadCtrl.battleForm.type != false}")
+                                i.people
+                                span Friends
+                        select.upload-photo__topic(ng-model="uploadCtrl.battleForm.cat")
+                            option.upload-photo__chooseTopicItem(value="Классический") Классический
+                            option.upload-photo__chooseTopicItem(value="Повседневный") Повседневный
+                            option.upload-photo__chooseTopicItem(value="Спортивный") Спортивный
+                            option.upload-photo__chooseTopicItem(value="Эротический") Эротический
+                            option.upload-photo__chooseTopicItem(value="Уличный") Уличный
+                            option.upload-photo__chooseTopicItem(value="Вечерний") Вечерний
+                        textarea#comment.upload-photo__comment(ng-model="uploadCtrl.battleForm.comment", name="comment-area", cols="30", rows="10", placeholder="Comment...")
+                        .upload-buttons-submit.cf
+                            a.btn-upload.upload__price(href="", ng-click="showPrice = true", ng-init="showPrice = false", ng-hide="showPrice") Price
+                            .upload-buttons-priceEnter.active(ng-show="showPrice")
+                                i.dollar-w.upload-buttons-priceEnter__image
+                                input.upload-price__field(ng-model="uploadCtrl.battleForm.price", type="number", placeholder="Price...")
+                            a.btn-upload.upload__start(href="" ng-click="sendForm()") Start
+                        
+                            //.upload-buttons-priceEnter
+                                i.dollar.upload-buttons-priceEnter__image
+                                input.upload__price.btn-upload(type="text")
+                
+
+//include includes/footer
+  

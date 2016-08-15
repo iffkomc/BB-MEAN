@@ -1,0 +1,38 @@
+- var location = ''
+- var images = location + '../img'
+
+
+script $(document).ready(function(){$('body').addClass('mainPage');});
+//include includes/header
+.main
+    .main-container.container
+        div(popup, open-popup="showPopup")
+        <div ui-view></div>
+        .main-header.battle-main-header
+            ul.main-popular-friends(ng-init="loadRandomFollowings()")
+                li.main-popular-friends__item(ng-repeat="user in mainCtrl.randomFollowings")
+                    a.main-popular-friends-item__link(ng-href="#/{{user.username}}")
+                        img(ng-src="/uploads/{{ user.avatarName || 'default' }}.jpg", alt="")
+                        p {{user.name || user.username}}
+            .main-header__nav
+                .main-header-nav__wrap
+                    ul.main-header-nav__list.main-page-header__nav.cf.shadowed
+                        li.main-header-nav-list__item
+                            a.main-header-nav-list-item__link(href="")
+                                i.dollar.main-header-nav-list-item-link__icon
+                                span.main-header-nav-list-item-link__heading Price
+                        li.main-header-nav-list__item.active
+                            a.main-header-nav-list-item__link(href="")
+                                i.eye.main-header-nav-list-item-link__icon
+                                span.main-header-nav-list-item-link__heading Views
+                        li.main-header-nav-list__item.active
+                            a.main-header-nav-list-item__link(href="")
+                                i.like-m.main-header-nav-list-item-link__icon
+                                span.main-header-nav-list-item-link__heading Favourites
+                        li.main-header-nav-list__item.active
+                            a.main-header-nav-list-item__link(href="")
+                                i.people.main-header-nav-list-item-link__icon
+                                span.main-header-nav-list-item-link__heading Friends
+                a.btn-big.btn-donate.shadowed(ui-sref="battles.donate") Donate
+        .main-content.container-max(ng-init="loadFriendsBattles()", style="background: none; box-sizing: content-box; width: 100%; padding-left: 0; padding-right: 0; width: 100%;")
+            div(battle-dtr="battle" ng-repeat="battle in friendBattles").battle-box.cf.shadowed

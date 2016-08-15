@@ -1,0 +1,12 @@
+<a ng-href="#/{{user.username}}" class="notification__photo">
+    <img ng-src="{{'/uploads/' + (user.avatarName || 'default')  + '.jpg'}}" alt="" class="notification-photo__item"/>
+</a>
+<div class="notification__description">
+    <a ng-href="#/{{user.username}}"><strong>{{user.name || user.username}} </strong></a>
+    <span>sent you a competition request {{notify.status}} {{notify.type}}</span>
+    <a ng-href="#/upload?id={{notify.itemId}}" class="notification__request_accept btn btn-green" ng-if="!notify.status"><span>Accept</span></a>
+    <a ng-click="reject()" class="notification__request_decline btn btn-red" ng-if="!notify.status"><span>Decline</span></a>
+
+    <a href="" class="notification__request_accept btn btn-green btn-active btn-vc" ng-show="notify.status=='applied'"><span>Accepted</span></a>
+    <a href="" class="notification__request_decline btn btn-red btn-active btn-vc" ng-show="notify.status=='rejected'"><span>Declined</span></a>
+</div>

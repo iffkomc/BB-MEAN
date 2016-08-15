@@ -1,0 +1,10 @@
+<div class="notifications__item notifications__item_followed notifications__item_center cf">
+    <a ng-href="#/{{user.username}}" class="notification__photo">
+        <img ng-src="{{'/uploads/' + (user.avatarName || 'default')  + '.jpg'}}"  alt="" class="notification-photo__item"/>
+    </a>
+    <div class="notification__description">
+        <span>Your </span>
+        <a ng-href="#/{{user.username}}">photo</a>
+        <span> has successfully posted! Look in your profile page</span>
+    </div>
+</div>

@@ -1,0 +1,107 @@
+- var location = ''
+- var images = location + 'svg'
+
+
+extends index
+
+block content
+    script $(document).ready(function(){$('body').addClass('profile').addClass('profile-dropdown-enable');});
+    include includes/header
+    .main
+      .main-container.container.profile-container
+        .main-content.shadowed.container-max
+            .main-popup.shadowed
+                ul.list-settings
+                    li.list-setting-item
+                        a.list-setting-item-link Spam
+                    li.list-setting-item
+                        a.list-setting-item-link Insult
+                    li.list-setting-item
+                        a.list-setting-item-link Adult content
+                    li.list-setting-item
+                        a.list-setting-item-link Drug propaganda
+                    li.list-setting-item
+                        a.list-setting-item-link Children porn
+                    li.list-setting-item
+                        a.list-setting-item-link Extremism
+                    li.list-setting-item
+                        a.list-setting-item-link Violence
+            a.profile-settings(href="")
+                i.dots
+                
+            .profile-avatar-box.cf
+                a.profile-avatar(href="")
+                    img(src="#{images}/avatar.png", alt="")
+                h2 Virgil Abloh
+                .btn-row
+                    a.btn-profile.btn.btn-blue.btn-active(href="") Followed
+                    a.btn-profile.btn.btn-blue(href="") Like style
+                
+            .profile-counters.container.container-max.cf
+                a.w33(href="")
+                    p Followers
+                    span 56
+                a.w33(href="")
+                    p Following
+                    span 45
+                a.w33(href="")
+                    p Liked style
+                    span 1 600
+            .profile-buttons
+                a.btn-rounded.btn-blue.shadowed
+                    i.person-w
+                a.btn-rounded.btn-blue.shadowed
+                    i.like-w
+            .profile-dropdown
+                h3.profile-dropdown__heading Information
+                .box-separated.cf
+                    .box-separated__part
+                        p.profile-dropdown-item.profile-dropdown-item_about
+                            i.person-m
+                            | About me: 
+                            strong "I am Virgil Abloh - web-designer from Ukraine"
+                        p.profile-dropdown-item.profile-dropdown-item_date
+                            i.calend
+                            | Date of birth: 
+                            strong 11.09.1996
+                        p.profile-dropdown-item.profile-dropdown-item_city
+                            i.city
+                            | City: 
+                            strong Lviv
+                    .box-separated__part
+                        p.profile-dropdown-item.profile-dropdown-item_social
+                            i.manyPeople
+                            | Me in social networks:     
+                            a(href="http://vk.com/account") vk.com/account
+                            a(href="http://fb.com/account") fb.com/account
+                            a(href="http://twitter.com/account") twitter.com/account 
+                 a.btn-rounded.btn-blue.btn-active.shadowed.hideDropdown
+                    i.arrowUp
+                
+        .profile-gallery.container-max.cf
+            a.profile-photo-itemWrap(href="")
+                img.profile-photo-item.shadowed(src="#{images}/wallItem.jpg", alt="")
+            
+            a.profile-photo-itemWrap(href="")
+                img.profile-photo-item.shadowed(src="#{images}/wallItem.jpg", alt="")
+            
+            a.profile-photo-itemWrap(href="")
+                img.profile-photo-item.shadowed(src="#{images}/wallItem.jpg", alt="")
+            
+            a.profile-photo-itemWrap(href="")
+                img.profile-photo-item.shadowed(src="#{images}/wallItem.jpg", alt="")
+                
+            a.profile-photo-itemWrap(href="")
+                img.profile-photo-item.shadowed(src="#{images}/wallItem.jpg", alt="")
+            
+            a.profile-photo-itemWrap(href="")
+                img.profile-photo-item.shadowed(src="#{images}/wallItem.jpg", alt="")
+            
+            a.profile-photo-itemWrap(href="")
+                img.profile-photo-item.shadowed(src="#{images}/wallItem.jpg", alt="")
+            
+            a.profile-photo-itemWrap(href="")
+                img.profile-photo-item.shadowed(src="#{images}/wallItem.jpg", alt="")
+          
+    include includes/footer
+      

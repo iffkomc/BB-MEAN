@@ -1,0 +1,96 @@
+- var location = ''
+- var images = location + '../img'
+
+
+//include includes/header
+script $(document).ready(function(){$('body').addClass('profile');});
+style @media only screen and (max-width: 989px){ .profile .header {background-image: url('/uploads/'{{user.profile.avatarName}}'-bg.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; }} @media only screen and (min-width: 990px){.profile-container.container{background-image: url({{'/uploads/' + user.profile.avatarName + '-bg.jpg'}})}}
+.main
+    .main-container.container.profile-container(change-bg="user.setBg")
+        div(popup, open-popup="showPopup", username="user.profile.username")
+        <div ui-view></div>
+        .main-content.shadowed.container-max
+
+            .profile-settings(href="" blur-hide)
+                i.dots
+                .main-popup.shadowed()
+                    ul.list-settings
+                        li.list-setting-item
+                            a.list-setting-item-link(ng-click="user.sendComplain(user.profile.username)") {{locale.complain}}
+
+            .profile-avatar-box.cf
+                a.profile-avatar(ng-class="{'profile-avatar_empty' : !isVisibleAvatar}")
+                    uploading-progress(uploading-progress="uploadProgress")
+                    i.person-avatar(ng-hide="isVisibleAvatar")
+                    img(ng-src="/uploads/{{ avatarName || 'default' }}.jpg", ng-hide="isAddedAvatar" )
+                    img(ngf-src="avatar", ng-show="isAddedAvatar")
+                    .profile-avatar__add-new(ng-model="file", ng-show="isOwner", name="file", ngf-fix-orientation="true", ngf-select="upload($files)", ngf-change="upload($files, $file, $newFiles, $duplicateFiles, $invalidFiles, $event)", ngf-resize="{type: 'image/jpeg', quality: 1, width: 500, height: 500, centerCrop: true}")
+                        .profile-avatar-add-new_capture +
+
+                h2 {{ user.profile.name || user.profile.username }}
+                .btn-row(ng-if="isOwner")
+                    a.btn-profile.btn.btn-blue(ui-sref="settings") {{locale.edit}}
+                    a.btn-profile.btn.btn-green(ui-sref="user.share") {{locale.share}}
+                .btn-row(ng-if="!isOwner")
+                    <a class="btn-flw btn-profile btn btn-blue btn-active" ng-show="user.profile.followers.indexOf(user.owner.username) < 0" button req="{{'/follows?username=' + user.profile.username}}" profile="user.profile" owner="user.owner">{{locale.follow}}</a>
+                    <a class="btn-flw btn-profile btn btn-blue" ng-hide="user.profile.followers.indexOf(user.owner.username) < 0" button req="{{'/follows?username=' + user.profile.username}}" profile="user.profile" owner="user.owner" >{{locale.followed}}</a>
+                    <a class="btn-lk btn-profile btn btn-blue btn-active" ng-show="user.profile.likes.indexOf(user.owner.username) < 0" button req="{{'/likes?username=' + user.profile.username}}" profile="user.profile" owner="user.owner" >{{locale.like}}</a>
+                    <a class="btn-lk btn-profile btn btn-blue" ng-hide="user.profile.likes.indexOf(user.owner.username) < 0" button req="{{'/likes?username=' + user.profile.username}}" profile="user.profile" owner="user.owner" >{{locale.liked}}</a>
+            .profile-counters.container.cf
+                .w33(ng-click="showPopup('likes', user.profile.followers, user.owner)")
+                    p {{locale.followers}}
+                    span {{ user.profile.followers.length  }}
+                .w33(ng-click="showPopup('likes', user.profile.followings, user.owner)")
+                    p {{locale.followings}}
+                    span {{ user.profile.followings.length  }}
+                .w33(ng-click="showPopup('likes', user.profile.likes, user.owner)")
+                    p {{locale.likedStyle}}
+                    span {{ user.profile.likes.length  }}
+            .profile-buttons(ng-class="dropdown")
+                a.btn-rounded.btn-blue.shadowed(ng-click="dropdown='dd-info'")
+                    i.person-w
+                a.btn-rounded.btn-blue.shadowed(ng-click="dropdown='dd-battle'" ng-show="currentBattle")
+                    i.like-w
+                a.btn-rounded.btn-active.shadowed(ng-hide="currentBattle")
+                    i.like
+            .profile-dropdown.dropdown-info(ng-class="dropdown")
+                .profile-info-box
+                    h3.profile-dropdown__heading {{locale.information}}
+                    .box-separated.cf
+                        .box-separated__part
+                            p.profile-dropdown-item.profile-dropdown-item_about
+                                i.person-m
+                                | {{locale.about}}:
+                                strong
+                                    | "{{ user.profile.about }}"
+                            p.profile-dropdown-item.profile-dropdown-item_date
+                                i.calend
+                                | {{locale.dateBirth}}:
+                                strong
+                                    | {{ user.profile.birth }}
+                            p.profile-dropdown-item.profile-dropdown-item_city
+                                i.city
+                                | {{locale.city}}:
+                                strong
+                                    | {{ user.profile.city }}
+                        .box-separated__part
+                            p.profile-dropdown-item.profile-dropdown-item_social
+                                i.manyPeople
+                                | {{locale.meInSocial}}:
+                                a(ng-href="{{user.profile.vkUrl ? user.profile.vkUrl : ''}}" target="_blank" rel="nofollow") {{user.profile.vkUrl ? user.profile.vkUrl : ''}}
+                                a(ng-href="{{user.profile.fbId ? 'http://facebook.com/' + user.profile.fbId : ''}}" target="_blank" rel="nofollow") {{user.profile.fbId ? 'http://facebook.com/' + user.profile.fbId : ''}}
+                                a(ng-href="{{user.profile.twitId ? 'http://twitter.com/' + user.profile.twUsername : ''}}" target="_blank" rel="nofollow") {{user.profile.twitId ? 'http://twitter.com/' + user.profile.twUsername : ''}}
+                    a.btn-rounded.btn-blue.btn-active.shadowed.hideDropdown(ng-click="dropdown=''")
+                        i.arrowUp
+
+            .profile-dropdown.dropdown-battle(ng-class="dropdown")
+                div(battle-dtr="currentBattle" ng-show="currentBattle").battle-box.cf
+                a.btn-rounded.btn-blue.btn-active.shadowed.hideDropdown(ng-click="dropdown=''")
+                    i.arrowUp
+
+        .profile-gallery.container-max.cf
+            a.profile-photo-itemWrap(ui-sref="user.openPhoto({photoId: photo._id})", ng-repeat="photo in user.profile.photos | reverse")
+                img.profile-photo-item.shadowed(ng-src="/uploads/photos/{{photo.name}}.jpg", alt="")
+
+//include includes/footer
+  

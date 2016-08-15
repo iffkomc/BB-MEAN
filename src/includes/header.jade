@@ -1,0 +1,31 @@
+
+.header.shadowed(ng-controller="MenuCtrl as menuCtrl", ng-hide="menuCtrl.isForbidded")
+  //style .header{display: none;}
+  style @media only screen and (max-width: 989px){ .profile .header {background-image: url({{'/uploads/' + menuCtrl.user.avatarName + '-bg.jpg'}}); background-repeat: no-repeat; background-position: center center; background-size: cover; }} @media only screen and (min-width: 990px){.profile-container.container{background-image: url({{'/uploads/' + menuCtrl.user.avatarName + '-bg.jpg'}})}}
+  script $(document).ready(function(){$('body').addClass('profile').addClass('non-avatar');});
+  .header-container.container.cf
+    .header-search__box
+      a.header-search__link(ng-href="{{'#' + currentLocation}}/search")
+        i.search
+    .header-menu
+      ul.header-menu__nav.cf
+        li.header-menu__home.header-menu__item
+          a.header-menu-item__link(href="#/battles")
+            i.home
+        li.header-menu__image.header-menu__item
+          a.header-menu-item__link(ng-click="menuCtrl.goUpload()")
+            i.add-image
+        li.header-menu__notify.header-menu__item
+          a.header-menu-item__link(href="#/notifications")
+            span {{notificationsCounter}}
+            i.bell
+
+        li.header-menu__follow.header-menu__item
+          a.header-menu-item__link(ng-href="#/{{menuCtrl.user.username}}")
+            i.friend
+        li.header-menu__settings.header-menu__item
+          a.header-menu-item__link(href="#/settings")
+            i.settings
+    a.header-logo(href="#/battles")
+      i.logo
+

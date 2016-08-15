@@ -1,0 +1,45 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+.popup-notify{
+    position: relative;
+    width: 400px;
+    padding: 10px 33px 5px 5px;
+    position: fixed;
+    z-index: 60;
+    bottom: 20px;
+    left: 20px;
+    background-color: #fff;
+    
+}
+.popup-notify .btn{
+    padding: 4px 0 7px;
+    width: 5.5em;
+}
+.popup-notify .btn+.btn{
+    margin-left: 10px;
+}
+.popup-notify  .notifications__item{
+    font-size: 0.8em;
+}
+.popup-notify .notification__description{
+    padding-right: 0;
+    padding-left: 85px;
+    margin-top: 15px;
+}
+.popup-notify .notification__description div{
+    margin-top: 10px;
+}
+.popup-notify-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
+}
+
+@media only screen and (max-width: 989px) {
+    .popup-notify{
+        display: none;
+    }
+}
+

@@ -1,0 +1,29 @@
+- var location = ''
+- var images = location + '../img'
+
+
+//include includes/header
+.main
+  .main-container.container
+    <div ui-view></div>
+    include includes/main-header
+    .main-content.shadowed
+      .notifications()
+        .notifications__item.cf(ng-repeat="notify in filtered = (notifications | reverse | notifilter:type)", notify="notify")
+        //include includes/follow-active
+        //include includes/comment
+        //include includes/request-accepted
+        //include includes/reply
+        //include includes/follow
+        //include includes/request
+        //include includes/voted
+        //include includes/like
+        //include includes/followed
+        //include includes/request-declined
+        //include includes/compete
+        //include includes/reject
+        //include includes/posted
+
+        
+//include includes/footer
+  

@@ -1,0 +1,17 @@
+<a ng-href="#/{{user.username}}" class="notification__photo">
+    <img ng-src="{{'/uploads/' + (user.avatarName || 'default') + '.jpg'}}" alt="" class="notification-photo__item"/>
+</a>
+<div class="notification__description">
+
+    <strong>{{user.name || user.username}} </strong>
+
+    <a ng-href="#/{{user.username}}" class="text-red">has rejected</a><span> your request for a battle </span>
+
+    <a href="" class="notification__request_accept btn btn-green">
+        <span class="small">Send again</span>
+    </a>
+
+    <a href="" class="notification__request_decline btn btn-red">
+        <span>Delete</span>
+    </a>
+</div>

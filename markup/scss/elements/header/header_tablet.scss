@@ -1,0 +1,27 @@
+@import "../../../scss/_variables";
+@import "../../../scss/_functions";
+
+
+@media only screen and (max-width : 989px) {
+  $browser-context: 25;
+  body{
+    padding-top: 0;
+  }
+  .header {
+    background: #10a5d8; //10a5d8
+    position: relative;
+      z-index: 1;
+  }
+  .header-menu__item {
+    display: none;
+  }
+  .header-menu__settings {
+    display: block;
+  }
+  .header-logo{
+    margin-top: em(9);
+  }
+  .header-search__link, .header-menu-item__link{
+    padding: 1.11111em 1.5em 0.94444em;
+  }
+}

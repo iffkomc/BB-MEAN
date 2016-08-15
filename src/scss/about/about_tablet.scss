@@ -1,0 +1,14 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+@media only screen and (max-width : 989px) {
+
+  $browser-context: 18;
+
+  .about{
+    font-size: $browser-context * 1px;
+    margin-top: em(-14);
+  }
+
+
+}

@@ -1,0 +1,102 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+@media only screen and (max-width: 480px) {
+    .profile-avatar {
+        width: 69%;
+        display: block;
+        margin: 0 auto;
+    }
+    .profile-photo-itemWrap{
+        width: 50%;
+    }
+    .profile-counters{
+        padding: 15px 0;
+    }
+    .profile .main-content {
+        //height: 374px;
+    }
+    .profile-counters {
+        padding-top: 266px;
+    }
+      
+.hideDropdown{
+    padding: 12px 14px;
+}
+    .profile-avatar-box h2 {
+        font-size: 1.8em;
+    }
+    .profile-counters{
+        
+    }
+    .profile-info-box{
+        padding: 15px 0;
+    }
+    .profile-dropdown-enable.profile .main-content {
+    //height: 732px;
+}
+    .box-separated__part{
+        padding-left: 30px;
+    }
+    .profile-dropdown {
+        margin: 2px -6px;
+    }
+//    .hideDropdown{
+//        width: 63px;
+//    }
+    
+    
+    
+    .battle-box{
+        padding: 0 0 20px;
+    }
+    .battle-info-counters__looks{
+        margin-left: 3px;
+    }
+    .battle-info-counters__remain{
+        margin-left: 5px;
+    }
+    .battle-info-price__item{
+        padding: 4px 5px;
+    }
+    .battle-info-price__heading{
+        font-size: 13px;
+    }
+    .battle-photo-item__author{
+        position: static;
+        margin-bottom: 0;
+        display: block;
+        padding: 7px 5px 3px;
+        
+    }
+    .battle-photo-item-author__avatar{
+        width: 40px;
+        height: 40px;
+    }
+    .battle-photo-item-author__heading{
+        margin: 3px 0 5px 5px;
+        color: #767676;
+        font-size: 0.85em;
+    }
+    .battle-photo-item-box__price{
+        padding: 4px 5px;
+    }
+    .battle-photo-item-box__discuss{
+        padding: 4px 5px;
+    }
+    .battle-photo-item-box__inner{
+        position: static;
+    }
+    .battle-photo-item-box__inner i{
+        position: relative;
+        left: -2px;
+        top: 2px;
+    }
+    .battle-photo-item-box__discuss i{
+        position: relative;
+        left: 1px;
+        top: 1px;
+    }
+    .battle-mobile-rate__item{
+        padding: 5px 0;
+    }
+}

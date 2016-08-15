@@ -1,0 +1,49 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+@media only screen and (max-width : 989px) {
+
+  $browser-context: 15;
+  .popup{
+    background-color: transparent;
+    top: em(60);
+    left: auto;
+    right: auto;
+    bottom: auto;
+    z-index: 0;
+  }
+  .popup-box{
+    position: static;
+    margin: 0;
+    width: 100%;
+    padding-bottom: em(40);
+  }
+  .btn.btn-vc{
+    top: em(28);
+    border-radius: 6px 0 0 6px;
+  }
+  body{
+    padding-bottom: 100px;
+  }
+
+}
+
+
+@media only all and (max-width: 990px){
+
+//  body{
+//    padding-top: em(53);
+//  }
+//  .main-content{
+//    font-size: em(14);
+//  }
+//  .btn.btn-vc{
+//    top: em(35);
+//  }
+
+
+}
+@media all and (min-width: 1280px){
+
+}
+

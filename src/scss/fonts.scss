@@ -1,0 +1,57 @@
+@import "../scss/_variables";
+// main-mobile
+// about
+// main-desktop
+// media
+@font-face {
+    font-family: JoannaSansNova;
+    /* Гарнитура шрифта */
+    font-weight: bold;
+    src: url(#{$fonts}/JoannaSansNova/JoannaSansNovaBold.otf);
+    /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: JoannaSansNova;
+    /* Гарнитура шрифта */
+    font-weight: normal;
+    src: url(#{$fonts}/JoannaSansNova/JoannaSansNova.otf);
+    /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: JoannaSansNovaMT;
+    /* Гарнитура шрифта */
+    font-weight: normal;
+    src: url('#{$fonts}/JoannaSansNova/JoannaSansNovaMedium/JoannaSansNova-Medium.eot?#iefix') format('embedded-opentype'), url('#{$fonts}/JoannaSansNova/JoannaSansNovaMedium/JoannaSansNova-Medium.otf') format('opentype'), url('#{$fonts}/JoannaSansNova/JoannaSansNovaMedium/JoannaSansNova-Medium.woff') format('woff'), url('#{$fonts}/JoannaSansNova/JoannaSansNovaMedium/JoannaSansNova-Medium.ttf') format('truetype'), url('#{$fonts}/JoannaSansNova/JoannaSansNovaMedium/JoannaSansNova-Medium.svg##{$fonts}/JoannaSansNova/JoannaSansNova-Medium') format('svg');
+}
+
+@font-face {
+    font-family: JoannaSansNovaBold;
+    src: url('#{$fonts}/JoannaSansNova/JoannaSansNovaBold/JoannaSansNova-Bold.eot?#iefix') format('embedded-opentype'), url('#{$fonts}/JoannaSansNova/JoannaSansNovaBold/JoannaSansNova-Bold.otf') format('opentype'), url('#{$fonts}/JoannaSansNova/JoannaSansNovaBold/JoannaSansNova-Bold.woff') format('woff'), url('#{$fonts}/JoannaSansNova/JoannaSansNovaBold/JoannaSansNova-Bold.ttf') format('truetype'), url('#{$fonts}/JoannaSansNova/JoannaSansNovaBold/JoannaSansNova-Bold.svg#JoannaSansNova-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: JoannaSansNovaBook;
+    src: url('#{$fonts}/JoannaSansNova/JoannaSansNovaBook/JoannaSansNova-Book.eot?#iefix') format('embedded-opentype'), url('#{$fonts}/JoannaSansNova/JoannaSansNovaBook/JoannaSansNova-Book.otf') format('opentype'), url('#{$fonts}/JoannaSansNova/JoannaSansNovaBook/JoannaSansNova-Book.woff') format('woff'), url('#{$fonts}/JoannaSansNova/JoannaSansNovaBook/JoannaSansNova-Book.ttf') format('truetype'), url('#{$fonts}/JoannaSansNova/JoannaSansNovaBook/JoannaSansNova-Book.svg#JoannaSansNova-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: JoannaSansNovaThin;
+    src: url('#{$fonts}/JoannaSansNova/JoannaSansNovaThin/JoannaSansNova-Thin.eot?#iefix') format('embedded-opentype'), url('#{$fonts}/JoannaSansNova/JoannaSansNovaThin/JoannaSansNova-Thin.otf') format('opentype'), url('#{$fonts}/JoannaSansNova/JoannaSansNovaThin/JoannaSansNova-Thin.woff') format('woff'), url('#{$fonts}/JoannaSansNova/JoannaSansNovaThin/JoannaSansNova-Thin.ttf') format('truetype'), url('#{$fonts}/JoannaSansNova/JoannaSansNovaThin/JoannaSansNova-Thin.svg#JoannaSansNova-Thin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: MyriadPro;
+    /* Гарнитура шрифта */
+    font-weight: normal;
+    src: url(#{$fonts}/MyriadPro/MyriadProRegular/MyriadProRegular.eot);
+    /* Путь к файлу со шрифтом */
+    src: url('#{$fonts}/MyriadPro/MyriadProRegular/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'), url('#{$fonts}/MyriadPro/MyriadProRegular/MyriadPro-Regular.woff') format('woff'), url('#{$fonts}/MyriadPro/MyriadProRegular/MyriadPro-Regular.ttf') format('truetype');
+}

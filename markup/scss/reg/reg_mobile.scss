@@ -1,0 +1,12 @@
+@import "../../scss/_functions";
+
+@media only screen and (max-width: 480px){
+  $browser-context: 14;
+    .reg__box{
+         width: 100%;
+        top: 50px;
+        left: 0;
+        right: 0;
+        margin: 0;
+    }
+}

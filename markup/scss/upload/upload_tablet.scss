@@ -1,0 +1,14 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+@media only screen and (max-width: 989px) {
+    $browser-context: 15;
+    
+    
+    .upload-page, .upload__photo, .upload__fields{
+        display: block;
+        width: 100%;
+    }
+    
+    
+    
+}

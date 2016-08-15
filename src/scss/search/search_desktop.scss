@@ -1,0 +1,263 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+$browser-context: 18;
+
+.search-box__header{
+    background-color: #10a5d8;
+    padding: 3px 16px;
+}
+.search-box-header__searchBtn{
+    display: inline-block;
+    padding: 4px 9px;
+}
+
+.search-box__header i.search{
+    background-image: url('#{$imagesCssLvl2}/search-w.svg');
+    width: 25px;
+    height: 25px;
+}
+.search-box__header input{
+    border: 1px solid #bdbdbd;
+    font-family: JoannaSansNova;
+    color: #525252;
+    width: 15em;
+    //font-size: 1.3em;
+    padding: 7px 9px;
+    border-radius: 4px;
+}
+
+.search-box-body__header.shadowed{
+    position: relative;
+    box-shadow: 0 4px 13px 0 rgba(78, 78, 78, 0.5);
+}
+
+.search-box-body-header-params-brand__wrap > div{
+    position: relative;
+}
+.search-box-body-header-params-brand__wrap ul{
+    position: absolute;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    border: 2px solid #e5e5e5;
+    border-top: 0;
+    background: #fff;
+    font-size: 1.2em;
+    color: #b3b3b3;
+}
+.search-box-body-header-params-brand__wrap li {
+    padding: 0.2em 0.5em;
+    line-height: 1.1em;
+
+}
+.search-box-body-header-params-brand__wrap li:hover{
+    background-color: #eee;
+    color: #444;
+}
+
+.search-box-body-header-list__item{
+    width: 50%;
+    float: left;
+}
+
+.search-box-body-header-list-item__link{
+    display: block;
+    position: relative;
+    color: #b3b3b3;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 16px 20px;
+    &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 1em;
+        background-color: #bfbfbf;
+        top: 16px;    
+        right: 0;
+    }
+    &:hover, &:focus{
+        text-decoration: none;
+        background: #e3e3e3;
+    }
+}
+
+.search-box-body-header-list__item:last-of-type .search-box-body-header-list-item__link:after{
+    display: none;
+}
+.search-box-body-header-list__item.active .search-box-body-header-list-item__link{
+    background: transparent;
+}
+.active > .search-box-body-header-list-item__link{
+    color: #10a5d8;
+}
+
+
+.search-box-body-header-params__city, .search-box-body-header-params__age, .search-box-body-header-params__tag, .search-box-body-header-params__brand{
+    width: 50%;
+    float: left;
+    padding: 0 20px;
+}
+.search-box-body-header-params-brand__icon{
+    background-image: url('#{$imagesCssLvl2}/search-box-body-header-params-brand.svg');
+}
+.search-box-body-header-params-tag__icon{
+    background-image: url('#{$imagesCssLvl2}/search-box-body-header-params-tag.svg');
+}
+.search-box-body-header-params-city__icon{
+    background-image: url('#{$imagesCssLvl2}/search-box-body-header-params-city.svg');
+}
+.search-box-body-header-params-age__icon{
+    background-image: url('#{$imagesCssLvl2}/search-box-body-header-params-age.svg');
+}
+.search-box-body-header-params-city__icon, .search-box-body-header-params-age__icon, .search-box-body-header-params-tag__icon, .search-box-body-header-params-brand__icon{
+    height: 21px;
+    width: 21px;
+    float: left;
+    margin-top: 11px;
+}
+.search-box-body-header__params{
+    padding: 0 30px 30px;
+}
+
+.search-box-body-header-params-city__wrap, .search-box-body-header-params-age__wrap, .search-box-body-header-params-brand__wrap, .search-box-body-header-params-tag__wrap{
+    padding-left: 35px;
+}
+
+.search-box-body-header__list{
+    margin-bottom: 10px;
+}
+
+.popup .message__item .btn{
+    font-size: 1em;
+}
+.search-box-body-header-params-city__field, .search-box-body-header-params-age__field, .search-box-body-header-params-tag__field, .search-box-body-header-params-brand__field{
+    font-family: JoannaSansNovaThin, sans-serif;
+    border: 2px solid #e5e5e5;
+    border-radius: 5px;
+    padding: 7px;
+    width: 100%;
+}
+
+.search-box-body-body__people{
+    padding: 0 33px 0 25px;
+}
+.message__item{
+    display: table;
+    width: 100%;
+    padding: 17px  0;
+    border-bottom: 1px solid #c2c2c2;
+}
+.message-avatar-place, .message-text-place, .message-action-place{
+    display: table-cell;
+    vertical-align: middle;
+}
+.message-text-place{
+    padding: 0 13px 0 17px;
+}
+.message-avatar-place{
+    width: 65px;
+}
+.message-action-place{
+    width: 140px;
+}
+.message-action-place .btn{
+    width: 100%;
+    padding: 10px;
+}
+
+.search-text-bold{
+    font-family: JoannaSansNovaMT;
+    color: #6b6b6b;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.search-box-body-body__avatarLink{
+    display: inline-block;
+    border: 1px solid #eef3f8;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.search-box-body-body__avatarLink-avatar{
+    border-radius: 50%;
+    vertical-align: bottom;
+    border: 2px solid #fff;
+}
+
+
+
+.search-box-body-body__photos{
+ 
+    padding: 16px 13px;
+}
+
+.search-box-body-body-photos__item{
+    width: 50%;
+    float: left;
+    padding: 14px 10px 0 10px;
+    background: transparent;
+}
+.search-box-body-body__photos{
+    
+}
+
+.search-box-body-body-photos-item__photo{
+    width: 100%;
+}
+
+.search-box-body-body-photos-item__caption{
+    display: table;
+    width: 100%;
+    padding:  12px 8px 12px 15px;
+}
+.search-box-body-body-photos-item-caption__avatar, .search-box-body-body-photos-item-caption__name, .search-box-body-body-photos-item-caption__action {
+    display: table-cell;
+    vertical-align: middle;
+    &:hover{
+        text-decoration: none;
+    }
+}
+.search-box-body-body-photos-item-caption__avatar{
+     width: 40px;   
+}
+
+.search-box-people-discuss{
+    background-image: url('#{$imagesCssLvl2}/new-discuss.svg');
+}
+.search-box-body-body-photos-item-caption__name{
+    padding: 0 10px;
+}
+.search-box-body-body-photos-item-caption__name span{
+    color: #6b6b6b;
+}
+.search-box-body-body-photos-item-caption__action{
+    width: 36px;
+    position: relative;
+    top: 3px;
+}
+.search-choose-brands p span{
+    float: right;
+}
+.search-box-body-body-photos-item-caption__avatar{
+    border-radius: 50%;
+    border: 1px solid #eee;
+}
+.search-box-body-body-photos-item-caption-avatar-image{
+    border: 1px solid #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.search-box-body-header-params-brand__wrap p{
+    margin: 9px 0;
+    font-size: 1.2em;
+}
+@media only all and (min-width: 990px) {
+    .search-box-body-body-photos-item__inner.shadowed{
+        box-shadow: 0 5px 21px 1px rgba(78, 78, 78, 0.5);
+    }
+}
+
+@media all and (min-width: 1280px) {}

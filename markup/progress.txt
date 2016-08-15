@@ -1,0 +1,41 @@
+- в каждом jade файле есть переменные путей. Если нужно исправить какой-либо путь, необходимо выполнить поиск и замену по всему проекту.
+- head.jade содержит дополнительные переменные для указания путей к css & js файлам
+- в _variables.scss лежат переменные с путями к файлам
+ 
+
+
+
+profile
+         -main http://ivkodenis92.github.io/Burbl/profile.html
+         -empty http://ivkodenis92.github.io/Burbl/profileEmpty.html
+         -battle-opened http://ivkodenis92.github.io/Burbl/profile-battle-opened.html
+         -battle-voted http://ivkodenis92.github.io/Burbl/profile-battle-voted.html
+         -dropdown http://ivkodenis92.github.io/Burbl/profile-dropdown.html
+         -popup1 http://ivkodenis92.github.io/Burbl/profile-popup1.html
+         -popup2 http://ivkodenis92.github.io/Burbl/profile-popup2.html
+         -notify http://ivkodenis92.github.io/Burbl/popup-notify-desktop.html
+         
+search
+        -people http://ivkodenis92.github.io/Burbl/search-people.html
+        -photos http://ivkodenis92.github.io/Burbl/search-photos.html
+        
+mainPage http://ivkodenis92.github.io/Burbl/mainPage.html
+
+share Account http://ivkodenis92.github.io/Burbl/shareAccount.html
+
+registration http://ivkodenis92.github.io/Burbl/registration.html
+    
+notifications http://ivkodenis92.github.io/Burbl/notifications.html
+
+about http://ivkodenis92.github.io/Burbl/about.html
+
+donate http://ivkodenis92.github.io/Burbl/donate.html
+
+improve http://ivkodenis92.github.io/Burbl/improve.html
+
+upload photo 
+        -static http://ivkodenis92.github.io/Burbl/uploadPhoto.html
+        -active http://ivkodenis92.github.io/Burbl/uploadPhotoSelect.html
+
+chooseFriend http://ivkodenis92.github.io/Burbl/chooseFriend.html
+         

@@ -1,0 +1,108 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+@media only screen and (max-width : 989px) {
+
+  $browser-context: 15;
+     .reg__global{
+         background-image: url('#{$imagesCssLvl2}/tabletBG.jpg');
+         background-size: cover;
+         background-attachment: fixed;
+    }
+    .btn-req__login{
+        display: none;
+    }
+    .btn-reg{
+        width: 100%;
+    }
+    .reg__header a{
+        color: #fff!important;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    .reg__box{
+        max-width: 100%; 
+    }
+    .reg__header{
+        padding-right: 30px;
+    }
+    .reg__req a{
+        float: none;
+    }
+    .reg__req{
+        padding-bottom: 50px;
+        margin-top: 20px;
+    }
+    .reg-header__login{
+        margin-top: 7px;
+    }
+    .reg-header__logo{
+        display: none;
+    }
+    .reg__logo{
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        padding: 0 10%;
+        margin-bottom: 50px;
+    }
+    .reg__logo img{
+        width: 50%;
+        height: auto;        
+    }
+    .reg-header__about{
+        float: left;
+    }
+    .reg-header__login{
+        float: right;
+    }
+    .reg__header{
+        background-color: transparent;
+    }
+    .reg__box{
+        margin-top: 50px;
+        top: 0;
+        background-color: transparent;
+    }
+    .reg__box input{
+        color: #555;//#A9A9AB;
+        background-color: #fff;
+        border: none;
+    }
+    .reg__box h1{
+        display: none;
+    }
+    .reg__info{
+        display: none;
+    }
+    .log__req {
+        width: 100%;
+    }
+    .log__social h4{
+        margin-top: 50px;
+    }
+    .log__social{
+      width: 100%;
+      text-align: center;
+    }
+    .log__social ul{
+        display: inline-block;
+    }
+    .log__social li {
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+    }   
+    .log__social li i{
+        width: 3em;
+        height: 3em;
+    }
+    .reg__forgot{
+        margin-top: 4px;
+    }
+}
+
+
+@media only all and (max-width: 990px){
+
+}

@@ -1,0 +1,30 @@
+- var location = ''
+- var images = location + '../img'
+
+<style>html,body{overflow:hidden; height: 100%;}</style>
+.reg__global
+.reg__header.container
+    a.reg-header__logo(href="")
+        img(src="#{images}/logo.svg", alt="")
+    a.reg-header__about(href="#/about") About us
+    a.reg-header__login(href="#/signup") Sign up
+.reg__info
+    h2
+        img(src="#{images}/logo-w.svg", alt="Burbl")
+        small Find out who like your style!
+    ul
+        li Share your daily looks
+        li Compete with friends
+        li Vote for their style
+        li Become a favourite
+.reg__box
+    a.reg__logo(href="")
+        img(src="#{images}/logo-w.svg", alt="")
+    h1 Recovery
+    form(action="", method="POST")
+        input(type="password", class="password-enter" name="password", ng-model="password" placeholder="Password", required)
+        input(type="password", name="repeat", class="password-enter", ng-model="passwordRepeat", placeholder="Re-enter password", required)
+        .log__req.full-size.cf
+            a.btn-reg.btn-req__signin.pull-left(href="#/forgot") Back
+            a.btn-reg.btn-req__reg.pull-right.active(ng-click="sendRecovery()") Next
+    p {{ message }}

@@ -1,0 +1,70 @@
+- var location = ''
+- var images = location + 'svg'
+
+
+extends index
+
+block content
+    script $(document).ready(function(){$('body').addClass('profile');});
+    include includes/header
+    .main
+      .main-container.container.profile-container
+        .main-content.shadowed.container-max
+            .main-popup.shadowed
+                ul.list-settings
+                    li.list-setting-item
+                        a.list-setting-item-link Complain
+            a.profile-settings(href="")
+                i.dots
+                
+            .profile-avatar-box.cf
+                a.profile-avatar(href="")
+                    img(src="#{images}/avatar.png", alt="")
+                h2 Virgil Abloh
+                .btn-row
+                    a.btn-profile.btn.btn-blue.btn-active(href="") Followed
+                    a.btn-profile.btn.btn-blue(href="") Like style
+                
+            .profile-counters.container.container-max.cf
+                a.w33(href="")
+                    p Followers
+                    span 56
+                a.w33(href="")
+                    p Following
+                    span 45
+                a.w33(href="")
+                    p Liked style
+                    span 1 600
+            .profile-buttons
+                a.btn-rounded.btn-blue.shadowed
+                    i.person-w
+                a.btn-rounded.btn-blue.shadowed
+                    i.like-w
+                
+        .profile-gallery.container-max.cf
+            a.profile-photo-itemWrap(href="")
+                img.profile-photo-item.shadowed(src="#{images}/wallItem.jpg", alt="")
+            
+            a.profile-photo-itemWrap(href="")
+                img.profile-photo-item.shadowed(src="#{images}/wallItem.jpg", alt="")
+            
+            a.profile-photo-itemWrap(href="")
+                img.profile-photo-item.shadowed(src="#{images}/wallItem.jpg", alt="")
+            
+            a.profile-photo-itemWrap(href="")
+                img.profile-photo-item.shadowed(src="#{images}/wallItem.jpg", alt="")
+                
+            a.profile-photo-itemWrap(href="")
+                img.profile-photo-item.shadowed(src="#{images}/wallItem.jpg", alt="")
+            
+            a.profile-photo-itemWrap(href="")
+                img.profile-photo-item.shadowed(src="#{images}/wallItem.jpg", alt="")
+            
+            a.profile-photo-itemWrap(href="")
+                img.profile-photo-item.shadowed(src="#{images}/wallItem.jpg", alt="")
+            
+            a.profile-photo-itemWrap(href="")
+                img.profile-photo-item.shadowed(src="#{images}/wallItem.jpg", alt="")
+          
+    include includes/footer
+      

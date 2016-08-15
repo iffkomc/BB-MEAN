@@ -1,0 +1,46 @@
+{
+  "language": "Language",
+  "edit": "Edit",
+  "share": "Share",
+  "followers": "Followers",
+  "followings": "Followings",
+  "likedStyle": "Liked style",
+  "likeStyle": "Like style",
+  "friends": "Friends",
+  "feedback": "Feedback",
+  "liked": "Liked",
+  "like": "Like",
+  "followed": "Followed",
+  "follow": "Follow",
+  "info": "Information",
+  "about": "About me",
+  "dateBirth": "Date of birth",
+  "city": "City",
+  "meInSocial": "Me in social networks",
+  "complain": "Complain",
+  "settings": "Settings",
+  "sync": "Synchronize",
+  "deleteProfile": "Delete profile",
+  "exit": "Exit",
+  "citiesList": [
+    {
+      "kiev": "Kiev"
+    },
+    {
+      "lviv": "Lviv"
+    },
+    {
+      "kharkov": "Kharkov"
+    },
+    {
+      "name" : "odessa",
+      "locale" : "Odessa"
+    },
+    {
+      "donetsk": "Donetsk"
+    },
+    {
+      "zaporozhe": "Zaporozh'e"
+    }
+  ]
+}

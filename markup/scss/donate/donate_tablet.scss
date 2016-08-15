@@ -1,0 +1,30 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+@media only screen and (max-width : 989px) {
+
+  $browser-context: 15;
+  
+  .donate-image{
+    margin: 0 2% 0 0;
+    width: 30%;
+    height: 30%;
+    max-width: em(150);
+    max-height: em(150);
+  }
+  .donate-description{
+    margin-top: em(20);
+  }
+  .donate-text{
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: em(35);
+  }
+  .donate-btn{
+    display: block;
+    width: 35%;
+    margin: 0 auto;
+
+  }
+
+}

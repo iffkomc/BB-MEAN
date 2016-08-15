@@ -1,0 +1,15 @@
+.footer(ng-controller="MenuCtrl as menuCtrl", ng-hide="menuCtrl.isForbidded")
+  .footer-container.container
+    ul.footer-nav.cf(process-btn-active="menuCtrl.user")
+      li.footer-nav__item.footer-nav-item_home
+        a.footer-nav-item__link(href="#/battles")
+          i.f-home.footer-nav-item-link__icon
+      li.footer-nav__item.footer-nav-item_photo
+        a.footer-nav-item__link(ng-click="menuCtrl.goUpload()")
+          i.f-photo.footer-nav-item-link__icon
+      li.footer-nav__item.footer-nav-item_notification
+        a.footer-nav-item__link(href="#/notifications")
+          i.f-notification.footer-nav-item-link__icon
+      li.footer-nav__item.footer-nav-item_avatar.active
+        a.footer-nav-item__link(href="#/{{menuCtrl.user.username}}")
+          i.f-avatar.footer-nav-item-link__icon

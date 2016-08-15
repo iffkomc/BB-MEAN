@@ -1,0 +1,58 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+@media only screen and (max-width : 989px) {
+
+  $browser-context: 15;
+    .popup-box.improve-box{
+        background-color: #0d6989;
+    }
+    .popup.improve{
+        position: absolute;
+        top: 54px;
+        z-index: 60;
+        background-color: #0d6989;
+        height: auto;
+        padding-bottom: 100px;
+    }
+    .popup.improve + div, .popup.improve + div + div{
+        display: none;
+    }
+    
+    .improve__body textarea{
+        color: #0d6989;
+    }
+    .popup-box.improve-box.shadowed{
+        box-shadow: 0 5px 7px 0 rgba(78, 78, 78, 0.5);
+        padding-bottom: 0;
+    }
+    .improve-box__heading{
+        margin: 35px 0 45px;
+    }
+    
+    .improve__body textarea::-webkit-input-placeholder {color:#0d6989;}
+    .improve__body textarea::-moz-placeholder          {color:#0d6989;}/* Firefox 19+ */
+    .improve__body textarea:-moz-placeholder           {color:#0d6989;}/* Firefox 18- */
+    .improve__body textarea:-ms-input-placeholder      {color:#0d6989;}
+    
+    
+    .btn-improve{
+        background-color: #0d6989;
+        border: 2px solid #0d6989;
+        &:hover{
+            border: 2px solid #0d6989;
+            background-color: #fff;
+            color: #0d6989;
+        }
+    }
+    .btn-improve.active{
+        border: 2px solid #0d6989;
+        background-color: #fff;
+        color: #0d6989;
+    }
+}
+
+
+@media only all and (max-width: 990px){
+
+}

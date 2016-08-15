@@ -1,0 +1,58 @@
+@import "../scss/_variables";
+@import "../scss/_functions";
+
+a{
+  color: #10a5d8;
+  text-decoration: none;
+}
+a:focus, a:hover{
+  text-decoration: underline;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+.container{
+  margin: 0 auto;
+}
+
+.shadowed{
+  box-shadow: 0 0 13px 0 rgba(78,78,78,0.5);
+}
+
+*{
+  box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+input,input:focus, input[type="text"], input[type="text"]:focus, textarea, textarea:focus{
+    outline: none!important;
+}
+input:focus, textarea:focus{
+    border-color: #10a5d8!important;    
+}

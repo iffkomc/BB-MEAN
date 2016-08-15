@@ -1,0 +1,160 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+.settings-box i{
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.settings-fields__email i{
+    width: 16px;
+    height: 16px;
+}
+.settings-fields__password i{
+    width: 17px;
+    height: 17px;
+}
+.settings-fields__sync i{
+    width: 15px;
+    height: 15px;
+}
+.settings-edit .information-fields__lang{
+    padding-left: 5em;
+    position: relative;
+}
+.settings-edit .information-fields__lang span{
+    position: absolute;
+    padding: 7px 0;
+    left: 0;
+}
+.information-fields__lang span{
+    color: #666;
+    font-family: JoannaSansNova;
+}
+.settings-edit .information-fields__lang span select{
+
+}
+
+.information-fields__date i {
+    width: 15px;
+    height: 15px;
+}
+.information-fields__delete i{
+    width: 16px;
+    height: 16px;
+}
+.information-fields__exit i{
+    width: 19px;
+    height: 19px;
+}
+
+.settings-box > div > div > div > span{
+    vertical-align: middle;
+}
+
+.settings-box{
+    font-size: 1rem;
+    padding: 23px 45px 15px;
+}
+.information-fields, .settings-fields{
+    float: left;
+    width: 50%;
+    font-family: JoannaSansNovaMT;
+    color: #999999!important;
+}
+.settings-fields h2, .information-fields h2{
+    color: #10a5d8;
+    font-weight: normal;
+    font-family: JoannaSansNovaThin;
+    font-size: 40px;
+    text-align: center;
+    margin: 5px 0 20px;
+}
+.settings-fields__sync li{
+    float: left;
+    margin-left: 4px;
+}
+.settings-fields__sync{
+    margin-right: 2px;
+}
+.settings-fields__sync li i{
+    width: 22px;
+    height: 22px;
+    margin: 0;
+}
+.settings-fields{
+    padding: 0 45px 0 15px;
+}
+.information-fields{
+    padding: 0 15px 0 60px;    
+}
+.information-fields strong{
+    font-weight: normal;
+    font-family: JoannaSansNovaBold;
+}
+
+.settings-fields__password, .settings-fields__email, .settings-fields__login, .settings-fields__name{
+    color: #999;
+    font-family: JoannaSansNovaMT;
+}
+.settings-fields__sync, .information-fields__date,  .information-fields__city, .information-fields__about, .information-fields__delete, .information-fields__exit{
+    color: #666;
+    font-family: JoannaSansNova;
+}
+
+.settings-fields{
+    position: relative;
+    &:after{
+        position: absolute;
+        content: "";
+        display: block;
+        height: 90%;
+        width: 1px;
+        background-color: #cccccc;
+        right: 0;
+        top: 5%;
+        bottom: 5%;
+    }
+}
+
+.settings-box > div > div > div{
+    margin-bottom: 10px;
+}
+.settings-fields__sync ul{
+    display: inline-block;
+    vertical-align: middle;
+}
+.settings-fields__sync li a{
+    display: block;
+}
+.settings-fields__sync li i{
+    width: 28px;
+    height: 28px;
+}
+
+.btn-settings{
+    display: inline-block;
+    padding: 2px 20px 5px;
+    background: #10a5d8;
+    color: #fff;
+    font-family: JoannaSansNova;
+    border-radius: 5px;
+    &:hover{
+        text-decoration: none;
+    }
+}
+.box{
+    margin-bottom: 20px;
+}
+.information-fields__exit:hover, .information-fields__delete:hover {
+    text-decoration: underline;
+}
+
+@media only all and (min-width: 990px){
+
+
+
+}
+@media all and (min-width: 1280px){
+
+}

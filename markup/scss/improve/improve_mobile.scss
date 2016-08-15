@@ -1,0 +1,26 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+@media only screen and (max-width: 480px){
+  $browser-context: 14;
+
+    
+    .popup.improve{
+        top: 47px;
+    }
+    .improve-rate-stars__item, .improve-share-social__item {
+        float: left;
+        margin-right: 2px;
+    }
+    .improve__rate{
+        float: none;
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 1.5em;
+    }
+    .improve__share{
+        float: none;
+        text-align: center;
+        font-size: 1.3em;
+    }
+}

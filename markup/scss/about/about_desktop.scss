@@ -1,0 +1,34 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+$browser-context: 18;
+
+.about{
+  margin: 0  em(-10);
+  color: #fff;
+}
+
+.block-colored{
+  padding: em(18) em(35) em(35);
+}
+.block-red{
+  background-color: #e56f6f;
+}
+.block-blue{
+  background-color: #10a5d8;
+}
+.block-green{
+  background-color: #28bd8b;
+}
+
+.block-colored__heading{
+  font-family: 'JoannaSansNovaThin';
+  font-weight: normal;
+  font-size: em(40);
+  margin: 0;
+}
+.block-colored__description{
+  font-family: 'JoannaSansNova';
+  font-weight: normal;
+  font-size: em(18);
+  margin: em(13) 0;
+}

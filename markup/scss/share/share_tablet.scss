@@ -1,0 +1,48 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+@media only screen and (max-width: 989px) {
+    $browser-context: 15;
+    
+    .share-box__body{
+        font-size: 1.3em;
+    }
+    .popup.share{
+        position: absolute;
+        top: 0;
+        z-index: 60;
+    }
+    .popup.share{
+        background-color: #24a2d3;
+    }
+    .popup-box.share-box{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .share-box__header{
+        display: block;
+    }
+    .share-box__close{
+        display: none;
+    }
+    .share-box__body{
+        max-width: 400px;
+        margin: 40px auto 10px;
+    }
+    .popup.share .header-logo{
+        display: block;
+    }
+    .header-reply__link{
+        display: inline-block;
+        padding: 0.7em 0.5em 0.94444em;
+    }
+    .header-reply__link i.reply{
+        background-image: url(#{$imagesCssLvl2}/replyFilled-w.svg);
+        width: 21px;
+        height: 21px;
+    }
+}

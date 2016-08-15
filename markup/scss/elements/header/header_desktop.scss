@@ -1,0 +1,63 @@
+@import "../../../scss/_variables";
+@import "../../../scss/_functions";
+/*
+HEADER START START
+*/
+$browser-context: 18;
+
+.header{
+  position: relative;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 70;
+}
+
+.header-container{
+  position: relative;
+  max-width: 990px;
+  padding: 0 15px;
+}
+.header-logo{
+  font-size: em(18);
+  display: block;
+  position: absolute;
+  margin-left: em(-45);
+  left: 50%;
+  width: em(90);
+  height: em(45);
+  margin-top: em(9);
+  margin-bottom: em(9);
+}
+
+.header-logo .logo{
+}
+
+.header-search__box{
+  float: left;
+}
+
+.header-menu{
+  float: right;
+}
+
+.header-menu__nav{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header-menu__item{
+  float: left;
+}
+.header-search__link, .header-menu-item__link{
+  display: block;
+    position: relative;
+    z-index: 5;
+  font-size: em(15);
+  padding: em(20) em(9) em(17);
+}
+/*
+HEADER END END
+*/

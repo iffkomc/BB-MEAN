@@ -1,0 +1,10 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+@media only screen and (max-width: 480px){
+  $browser-context: 14;
+
+    .main-page-header__nav .main-header-nav-list-item__link{
+        padding: 16px 0;
+    }
+}

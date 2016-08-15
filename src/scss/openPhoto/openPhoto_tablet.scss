@@ -1,0 +1,56 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+@media only screen and (max-width: 989px) {
+
+    $browser-context: 15;
+    // .popup.openPhoto+div, .popup.openPhoto + div + div{
+    //     display: none;
+    // }
+
+
+    .popup.openPhoto{
+		background-color: #e5e5e5;
+		z-index: 6;
+    }
+    .openPhoto-comment-body form a {
+        padding: 0 14px;
+        width: 13%
+    }
+    .openPhoto-comment-body form textarea{
+    	width: 87%
+    }
+    .openPhoto i {
+        width: 2.3em;
+        height: 2.3em;
+    }
+    .openPhoto-slider-controls-left i, .openPhoto-slider-controls-right i{
+        height: 100%;
+    }
+    .openPhoto-box-body-footer {
+        height: 4.5em;
+    }
+    .openPhoto-box-body-footer-buttons {
+        padding-top: 1.2em;
+    }
+    .newComment-submit {
+        text-align: center;
+    }
+    .newComment-submit i {
+        vertical-align: middle;
+        display: inline-block;
+        height: 100%;
+    }
+
+    .openPhoto-comment-body form a{
+        padding: 0 5px;
+        width: 15%;
+    }
+    .openPhoto-comment-body form textarea{
+        width: 75%;
+    }
+    .openPhoto-comment-body form a i{
+        max-width: 100%;
+    }
+}
+
+@media only all and (max-width: 990px) {}

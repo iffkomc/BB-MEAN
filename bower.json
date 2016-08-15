@@ -1,0 +1,21 @@
+{
+  "name": "AuthenticationInAngularJS",
+  "description": "",
+  "main": "",
+  "authors": [
+    "ivkodenis92 <ivkodenis92@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "ivkodenis92.github.io",
+  "private": true,
+  "dependencies": {
+    "angular-resource": "^1.5.5",
+    "angular": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "jquery": "^2.2.3",
+    "normalize-css": "^4.1.1",
+    "ng-file-upload": "^12.0.4",
+    "ng-file-upload-shim": "^12.0.4",
+    "angular-ui-router": "ui-router#^0.3.1"
+  }
+}

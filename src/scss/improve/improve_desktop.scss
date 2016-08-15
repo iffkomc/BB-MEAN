@@ -1,0 +1,117 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+
+.improve-box__heading{
+    margin: 0 5px 5px;
+    font-family: JoannaSansNova;
+    font-weight: normal;
+    font-size: 35 / 15 * 1em;
+    text-align: center;
+}
+.popup.improve{
+    font-size: 1.3em;
+}
+.popup-box.improve-box{
+    background-color: #ee5983;
+    color: #fff;
+}
+.improve-rate__heading, .improve-share__heading{
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.improve__header{
+    padding: 0 15px 10px;
+}
+
+.improve__body{
+    background-color: #fff;
+}
+
+.improve-rate__stars, .improve-share__social{
+    display: inline-block;
+    vertical-align: middle;
+}
+.improve__rate{
+    float: left;
+}
+.improve__share{
+    float: right;
+}
+.improve-rate-stars__item.active i.star{
+    background-image: url(#{$imagesCssLvl2}/starFilled.svg);
+}
+
+.improve-rate-stars__item, .improve-share-social__item{
+    float: left;
+    margin-right: 7px;
+}
+.improve-rate-stars__item i, .improve-share-social__item i{
+    width: 22/15 * 1em;
+    height: 22/15 * 1em;
+}
+
+.improve__container{
+    margin: 15px 0;
+}
+
+.improve__body textarea{
+    height: 200px;
+    padding: 0 0 10px 0;
+    width: 100%;
+    color: #ee5983;
+    resize: none;
+    border: none;
+}
+.improve__body textarea::-webkit-input-placeholder {color:#ee5983;}
+.improve__body textarea::-moz-placeholder          {color:#ee5983;}/* Firefox 19+ */
+.improve__body textarea:-moz-placeholder           {color:#ee5983;}/* Firefox 18- */
+.improve__body textarea:-ms-input-placeholder      {color:#ee5983;}
+.btn-improve{
+    display: inline-block;
+    text-align: center;
+    background-color: #ee5983;
+    border: 2px solid #ee5983;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 210px;
+    max-width: 49%;
+    &:hover{
+        border: 2px solid #ee5983;
+        background-color: #fff;
+        color: #ee5983;
+        text-decoration: none;
+    }
+}
+.btn-improve.active{
+    border: 2px solid #ee5983;
+    background-color: #fff;
+    color: #ee5983;
+    
+    
+}
+.improve__send{
+    float: right;
+}
+.improve__close{
+    float: left;
+}
+.improve__body{
+    padding: 10px 13px;
+}
+@media only all and (min-width: 990px){
+    .improve-box.shadowed{
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    }
+    .popup-box.improve-box{
+        width: 600px;
+        margin-left: -600/2 * 1px;
+    }
+    
+
+}
+@media all and (min-width: 1280px){
+
+}

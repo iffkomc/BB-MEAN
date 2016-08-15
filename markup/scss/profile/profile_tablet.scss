@@ -1,0 +1,328 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+@media only screen and (max-width: 989px) {
+    $browser-context: 15;
+    .profile.non-avatar .header {
+        background: #0b7093;
+        box-shadow: inset 0 -5px 13px -5px #000;
+    }
+    .profile .header {
+        background: url("#{$imagesCssLvl2}/bg.png") no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    .profile .header-logo {
+        display: none;
+    }
+    .profile-avatar-box {
+        top: -40px;
+    }
+    .profile-avatar-box h2 {
+        font-size: 1.5em;
+    }
+    .profile-avatar {
+        &:before {
+        }
+        &:after {
+        }
+    }
+    .profile-avatar__add-new{
+            position: absolute;
+            /* top: 0; */
+            right: 0;
+            height: 50px;
+            left: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+    }
+    .profile-avatar-add-new_capture{
+            position: absolute;
+            font-size: 43px;
+            color: #fff;
+            font-family: JoannaSansNovaMT;
+            /* top: 50%; */
+            left: 50%;
+            bottom: 0px;
+            margin-left: -0.25em;
+            z-index: 2;
+            margin-top: -0.7em;
+    }
+    .profile-avatar_empty{
+        width: 207px;
+        height: 207px;
+    }
+    .profile-avatar_empty i{
+        position: absolute;
+        left: 50%;
+        margin-left: -70px;
+        top: 50%;
+        margin-top: -70px;
+    }
+    .battle-photo_first + .battle-info{
+        display: none;
+    }
+    .profile-counters {
+        padding-top: 327px;
+    }
+    .profile-avatar img {
+        vertical-align: bottom;
+    }
+    .profile .main-content {
+        //height: 425px;
+    }
+    .profile-photo-itemWrap {
+        float: left;
+        width: 33.33%;
+        padding: 0 6px;
+        margin-bottom: 13px;
+    }
+    .profile .main-content {
+        margin-bottom: 50px;
+    }
+    .hideDropdown {
+        padding: 9px 12px;
+    }
+    .profile-info-box{
+        padding: 15px 50px;
+    }
+    .profile-avatar_empty {
+        position: relative;
+        display: inline-block;
+        padding: 55px 57px;
+        background-color: #10a5d8;
+        overflow: hidden;
+        &:before {
+        }
+        &:after {
+        }
+    }
+    .profile-avatar__add-new{
+            position: absolute;
+            display: block;
+            /* top: 0; */
+            right: 0;
+            height: 50px;
+            left: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+    }
+    .profile-avatar-add-new_capture{
+            position: absolute;
+            font-size: 43px;
+            color: #fff;
+            font-family: JoannaSansNovaMT;
+            /* top: 50%; */
+            left: 50%;
+            bottom: 0px;
+            margin-left: -0.25em;
+            z-index: 2;
+            margin-top: -0.7em;
+    }
+    .profile-dropdown {
+        margin: 0 -0.55556em;
+        box-shadow: 0 7px 10px -11px #000 inset;
+        padding: 0;
+    }
+    .profile-dropdown-enable.profile .main-content {
+    }
+    .battle-photo, .battle-photo_second, .battle-photo_first{
+        width: 50%;
+        padding: 0 3px;
+    }
+    
+    .battle-photo-item__box{
+        position: static;
+    }
+    
+    .battle-photo-rate{
+        display: none;
+    }
+    .battle-photo-item__author{
+        position: static;
+        margin-bottom: 10px;
+        display: block;
+        padding: 0px 10px;
+    }
+    .battle-photo-item-author__avatar{
+        width: 60px;
+        height: 60px;
+    }
+    .battle-photo-item-author__heading{
+        font-weight: normal;
+        font-size: 16px;
+        margin: 5px 0 5px 5px;
+        color: #767676;
+    }
+    .battle-photo-item-box__reply{
+        display: none;
+    }
+    .battle-photo-item-box__price{
+        position: absolute;
+        bottom: 2%;
+        left: 4%;
+        right: auto;
+        top: auto;
+        background: rgba(0,0,0,0.3);
+        border-radius: 50%;
+        padding: 8px 9px;
+    }
+    .battle-photo-item-box__discuss{
+        position: absolute;
+        bottom: 2%;
+        right: 4%;
+        left: auto;
+        top: auto;
+        background: rgba(0,0,0,0.3);
+        border-radius: 50%;
+        padding: 8px 9px;
+    }
+    .battle-photo-item-box__inner{
+        position: static;
+    }
+    .battle-photo-item-box__inner i{
+        position: relative;
+        left: -2px;
+        top: 2px;
+    }
+    .battle-photo-item-box__discuss i{
+        position: relative;
+        left: 1px;
+        top: 1px;
+    }
+    .battle-info-choose{
+        display: none;
+    }
+    
+    .battle-mobile-rate{
+        width: 100%;
+        padding: 0 3px;
+        
+    }
+    .battle-mobile-rate_wrap{
+        width: 50%;
+        float: left;
+    }
+    .battle-mobile-rate__item{
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        border-left: 3px solid #c9c9c9;
+        border-right: 3px solid #c9c9c9;
+        border-bottom: 3px solid #c9c9c9;
+        border-radius: 0 0 15px 15px;
+    }
+    .battle-mobile-rate_wrap{
+        margin-left: -2px;
+    }
+    .battle-mobile-rate_wrap:last-of-type{
+        float: right;
+        margin-left: 0;
+        margin-right: -2px;
+    }
+    .battle-info-price__heading, .battle-info-price__box{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .battle-info-price__box{
+//    position: relative;
+//    top: 2px;
+    }
+    .battle-info-price__item{
+        padding: 4px 10px;
+    }
+    .battle-info-counters {
+        position: static;
+        vertical-align: middle;
+    }
+    .battle-info-counters__looks, .battle-info-counters__remain{
+        display: inline-block;
+    }
+    .battle-info-price, .battle-info-counters{
+        display: inline-block;
+        width: auto;
+        padding: 0;
+    }
+    .battle-info-price__heading{
+        font-family: 'JoannaSansNovaThin';
+    }
+    .battle-info-counters__looks{
+        margin-left: 20px;
+        margin-top: 2px;
+    }
+    .battle-info-counters__remain{
+        margin-left: 20px;
+        margin-top: 2px;
+    }
+    .battle-info-counters__looks i{
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+    }
+    .battle-info-counters__remain i{
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+    }
+    .battle-info{
+        font-family: 'JoannaSansNovaThin';
+    }
+    .battle-info-price__item:first-of-type:after{
+        width: 1px;
+    }
+    .battle-info-price{
+    }
+    .battle-info-counters{
+    }
+    .battle-info{
+        text-align: center;
+    }
+    .battle-info-price{
+        font-size: 10px;
+    }
+    .battle-info-counters__remain i, .battle-info-counters__remain span{
+        vertical-align: middle;
+    }
+    .battle-info-counters__looks i, .battle-info-counters__looks span{
+        vertical-align: middle;
+    }
+    .battle-info-counters__looks span, .battle-info-counters__remain span{
+        font-size: 14px;
+    }
+    .battle-info-price{
+        margin-top: 8px;
+    }
+    .battle-info-choose-complete__result{
+        display: none;
+    }
+    .battle-mobile__result{
+        width: 100%;
+    }
+    .battle-info-counters {
+        position: relative;
+        top: -3px;
+    }
+    .battle-mobile-result__item{
+        float: left;
+        font-size: 2.3em;
+        padding: 5px 10px;
+        background-color: #c9c9c9;
+        text-align: center;
+        border-top: 3px solid #c9c9c9;
+        border-bottom: 2px solid #c9c9c9;
+    }
+    .battle-mobile-result__first{
+        width: 70%;
+        color: #c9c9c9;
+        background-color: #fff;
+        border-left: 2px solid #c9c9c9;
+        border-radius: 0 0 0 6px;
+    }
+    .battle-mobile-result__second{
+        width: 30%;
+        color: #fff;
+        background-color: #c9c9c9;
+        border-right: 2px solid #c9c9c9;
+        border-radius: 0 0 6px 0;
+    }
+}

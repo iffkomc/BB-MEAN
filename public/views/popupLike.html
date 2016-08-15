@@ -1,0 +1,26 @@
+<div class="popup search">
+    <div class="popup-box search-box shadowed">
+        <div class="search-box__header">
+            <a href="" class="search-box-header__searchBtn" ng-click="isOpenSearch = true" ng-hide="isOpenSearch" ng-init="isOpenSearch = false"><i class="search"></i></a>
+            <input ng-show="isOpenSearch" ng-model="searchQuery" type="text"/>
+        </div>
+        <div class="search-box__body">
+            <div class="search-box-body__body">
+                <div class="search-box-body-body__people">
+                    <div class="message__item" ng-repeat="user in usersList | findInByQuery : searchQuery"">
+                        <div class="message-avatar-place">
+                            <a ng-href="#/{{user.username}}" class="search-box-body-body__avatarLink">
+                                <img ng-src="/uploads/{{ user.avatarName || 'default' }}.jpg" alt="" class="message-avatar__item search-box-body-body__avatarLink-avatar" />
+                            </a>
+                        </div>
+                        <div class="message-text-place">
+                            <a ng-href="#/{{user.username}}" class="search-text-bold">{{ user.name  || user.username }}</a>
+                        </div>
+                        <div class="message-action-place" follow-btn-dtr tr req-a="{{'/follows?username=' + user.username}}" req-d="{{'/follows?username=' + user.username}}" owner="owner" id="user.username">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

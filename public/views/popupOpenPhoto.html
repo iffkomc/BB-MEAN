@@ -1,0 +1,72 @@
+<div class="popup openPhoto">
+    <div style="" class="popup-box openPhoto-box">
+        <style>
+            .profile-avatar-box{
+                display: none;
+            }
+        </style>
+        <div style="hight: 500px" class="openPhoto-box__body shadowed">
+            <div class="openPhoto-box-body-head"><a href="" class="openPhoto-box-body-settings"><i
+                    class="dots"></i></a></div>
+            <div class="openPhoto-box-body-body">
+                <div class="openPhoto-slider" open-photo-slider>
+                    <ul class="burbl-slider cf">
+                        <li class="burbl-slider-item" ng-class="{active: photoTmp == photo1}"><img style="width: 300px; height: 450px" ng-src="/uploads/photos/{{ photo1.name || 'default' }}.jpg" alt=""/></li>
+                        <li class="burbl-slider-item" ng-class="{active: photoTmp == photo2}"><img style="width: 300px; height: 450px" ng-src="/uploads/photos/{{ photo2.name }}.jpg" alt=""/></li>
+                    </ul>
+                    <div class="openPhoto-slider-controls">
+                        <a class="openPhoto-slider-controls-left" ui-sref="{{currentState}}.openPhoto({photoId: photoTmp2._id})"  ng-show="photoTmp2._id == battle.idPhoto1">
+                            <i class="arrowLeftWide"></i>
+                        </a>
+                        <a class="openPhoto-slider-controls-right" ui-sref="{{currentState}}.openPhoto({photoId: photoTmp2._id})"  ng-show="photoTmp2._id == battle.idPhoto2">
+                            <i class="arrowRightWide"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="openPhoto-box-body-footer">
+                <ul class="openPhoto-box-body-footer-buttons clearfix" ng-show="battleStatus">
+                    <li class="openPhoto-box-body-footer-buttons-item active"><a><i
+                            class="copy"></i><span>{{ winner }}</span></a></li>
+                    <li class="openPhoto-box-body-footer-buttons-item active"><a><i
+                            class="eye"></i><span>{{ views }}</span></a></li>
+                    <li class="openPhoto-box-body-footer-buttons-item active" ng-click="votePhoto()"><a><i
+                            class="like"></i><span>{{ likes }}</span></a></li>
+                </ul>
+                <ul class="openPhoto-box-body-footer-buttons clearfix" ng-hide="battleStatus">
+                    <li class="openPhoto-box-body-footer-buttons-item active"><a><i
+                            class="copy"></i><span>...</span></a></li>
+                    <li class="openPhoto-box-body-footer-buttons-item active"><a><i
+                            class="eye"></i><span>...</span></a></li>
+                    <li class="openPhoto-box-body-footer-buttons-item active"><a><i
+                            class="like"></i><span>...</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="openPhoto-box__comment shadowed openPhoto-box-wrap" ng-repeat="comment in comments">
+            <div class="openPhoto-comment-avatar"><a  ng-href="#/{{comment.user.username}}"><img ng-src="/uploads/{{ comment.user.avatarName || 'default' }}.jpg" alt="" style=""/></a>
+            </div>
+            <div class="openPhoto-comment-body">
+                <div class="openPhoto-comment-wrap">
+                    <div class="openPhoto-comment"><p class="openPhoto-comment-header"><strong>{{comment.user.name || comment.user.username}}</strong></p>
+
+                        <p class="openPhoto-comment-description">{{comment.text}}</p></div>
+                    <div class="openPhoto-comment-btns"><a class="comment-reply" ng-click="setComment(comment.userId, comment.user.name || comment.user.username);"><i
+                            class="reply"></i></a><a ng-click="likeComment(comments, $index)" ng-class="{'active': (comment.likes.indexOf(owner.user._id.toString()) > -1)}" class="comment-like"><i
+                            class="like"></i><span>{{comment.likes.length}}</span></a></div>
+                    <div class="openPhoto-comment-time"><span>{{ comment.ago }}</span></div>
+                    <div class="openPhoto-comment-settings"><a href=""><i class="dots"></i></a></div>
+                </div>
+            </div>
+        </div>
+        <div style="" class="openPhoto-box__newComment openPhoto-box-wrap shadowed clearfix">
+            <div style="" class="openPhoto-comment-avatar"><a  style=""><img  ng-src="/uploads/{{ owner.user.avatarName || 'default' }}.jpg"
+                                                                              alt="" style=""/></a></div>
+            <div style="" class="openPhoto-comment-body">
+                <form action="" style="" class="newComment-form"><textarea ng-model="commentText" name="" style=""
+                                                                           class="newComment-field"></textarea><a
+                        ng-click="newComment()" style="" class="newComment-submit"><i style="" class="message"></i></a></form>
+            </div>
+        </div>
+    </div>
+</div>

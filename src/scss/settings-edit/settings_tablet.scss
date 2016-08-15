@@ -1,0 +1,23 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+@media only screen and (max-width : 989px) {
+	.settings-edit .settings-fields__name, .settings-edit .settings-fields__login,.settings-edit .settings-fields__email, .settings-edit .settings-fields__password, .settings-edit .information-fields__city, .settings-edit.settings-edit > div > div > div{
+		margin-bottom: 15px;
+	}
+	.settings-edit .settings-fields__name i, .settings-edit .settings-fields__login i, .settings-edit .settings-fields__email i, .settings-edit .settings-fields__password i, .settings-edit .information-fields__city div {
+	    position: absolute;
+	    top: 6px;
+	}
+	.edit-aboutMe textarea {
+	    padding: 7px 10px 5px 41px;
+	}
+	.btn-settings{
+		padding: 4px 24px 6px;
+	}
+}    
+
+
+@media only all and (max-width: 990px){
+
+}

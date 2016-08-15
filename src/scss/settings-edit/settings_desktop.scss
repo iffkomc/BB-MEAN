@@ -1,0 +1,56 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+.settings-edit textarea{
+    resize: none;
+}
+.settings-edit input, .settings-edit select, .settings-edit textarea{
+	border: 1px solid #bdbdbd;
+    font-family: JoannaSansNova;
+    color: #525252;
+    width: 100%;
+    padding: 7px 9px;
+    border-radius: 4px;
+}
+
+.edit-aboutMe{
+    position: relative;
+
+}
+.edit-aboutMe i{
+    top: 10px;
+    left: 10px;
+    position: absolute;
+}
+.edit-aboutMe textarea{
+    padding: 5px 10px 5px 35px;
+}
+.settings-edit .settings-fields__name, .settings-edit .settings-fields__login, .settings-edit .settings-fields__email, .settings-edit .settings-fields__password, .settings-edit .information-fields__city{
+	position: relative;
+    padding-left: 32px;
+}
+.settings-edit .information-fields__city{
+    padding-left: 5em;
+}
+.settings-edit .settings-fields__name i, .settings-edit .settings-fields__login i, .settings-edit .settings-fields__email i, .settings-edit .settings-fields__password i, .settings-edit .information-fields__city div{
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+.settings-edit .settings-fields__name input, .settings-edit .settings-fields__login input, .settings-edit .settings-fields__email input, .settings-edit .settings-fields__password input, .settings-edit .information-fields__city select{
+}
+.settings-edit{
+
+}
+.settings-edit .information-fields__date input{
+	width: 3em;
+	text-align: center;
+}
+@media only all and (min-width: 990px){
+
+
+
+}
+@media all and (min-width: 1280px){
+
+}

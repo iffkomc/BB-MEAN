@@ -1,0 +1,52 @@
+@import "../../../scss/_variables";
+@import "../../../scss/_functions";
+
+@media only screen and (max-width : 989px) {
+
+  $browser-context: 25;
+
+  .footer i{
+    width: em(30);
+    height: em(30);
+  }
+  div.footer{
+    display: block;
+    position: fixed;
+    z-index: 70;
+    bottom: 0;
+    width: 100%;
+    background-color: #10a5d8;
+    border-top: 2px solid #10a5d8;
+    border-bottom: 2px solid #10a5d8;
+  }
+  .footer-nav{
+    list-style: none;
+  }
+  .footer-nav__item{
+    float: left;
+    width: 25%;
+  }
+  .footer-nav__item.active{
+    background-color: #fff;
+  }
+  .footer-nav__item.active i.f-home{
+    background-image: url('#{$imagesCssLvl3}/f-home-blue.svg');
+  }
+  .footer-nav-item_photo.active i.f-photo{
+    background-image: url('#{$imagesCssLvl3}/f-photo-blue.svg');
+  }
+  .footer-nav-item_notification.active i.f-notification{
+    background-image: url('#{$imagesCssLvl3}/f-notification-blue.svg');
+  }
+  .footer-nav-item_avatar.active i.f-avatar{
+    background-image: url('#{$imagesCssLvl3}/f-avatar-blue.svg');
+  }
+  .footer-nav-item__link{
+    display: block;
+    text-align: center;
+    padding: em(15) 0;
+  }
+  .footer-nav-item-link__icon{
+    vertical-align: middle;
+  }
+}

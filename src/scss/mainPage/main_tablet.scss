@@ -1,0 +1,68 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+@media only screen and (max-width: 989px) {
+
+  $browser-context: 15;
+  .main-popular-friends {
+    display: none;
+  }
+  .battle-photo.active .battle-photo-link-item__overlay {
+    //display: none;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .battle-photo-link-item {
+    display: block;
+    position: relative;
+
+  }
+  .battle-photo-link-item {
+    //background: rgba(0, 0, 0, 0.5);
+    //z-index: 1;
+  }
+
+  .battle-photo-item-box__price, .battle-photo-item-box__discuss {
+    z-index: 2;
+  }
+
+  .btn-donate {
+    display: none;
+  }
+
+  .main-header-nav__wrap {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .main-header-nav-list-item-link__heading {
+    display: none;
+  }
+
+  .main-page-header__nav i {
+    width: 23px;
+    height: 23px;
+  }
+
+  .main-page-header__nav .main-header-nav-list-item__link {
+    padding: 20px 0;
+  }
+
+  .mainPage .main-header + .main-content {
+    margin-top: -3px;
+  }
+
+  .battle-box {
+    padding: 15px 0 7px 0;
+  }
+}
+
+
+
+@media only all and (max-width: 990px) {
+
+}

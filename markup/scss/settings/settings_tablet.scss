@@ -1,0 +1,36 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+@media only screen and (max-width : 989px) {
+
+  $browser-context: 15;
+    .settings-box{
+        padding: 0 3% 15px;
+    }
+    .information-fields, .settings-fields{
+        width: 100%;
+        padding: 0;
+        &:after{
+            display: none;
+        }
+    }
+    .settings-box > div > div > div > i{
+        width: 25px;
+        height: 25px;
+    }
+    .settings-fields__sync li i{
+        width: 33px;
+        height: 33px;
+    }
+    .settings-fields__sync li{
+        margin-left: 4px;
+    }
+    .settings-fields h2, .information-fields h2 {
+        font-family: JoannaSansNova;
+    }
+}    
+
+
+@media only all and (max-width: 990px){
+
+}

@@ -1,0 +1,6 @@
+<a ng-href="#/{{user.username}}" class="notification__photo">
+    <img ng-src="{{'/uploads/' + (user.avatarName || 'default') + '.jpg'}}" alt="" class="notification-photo__item"/>
+</a>
+<div class="notification__description">
+    <a ng-href="#/{{user.username}}"><strong>{{user.name || user.username}} </strong></a><span>is following you</span>
+</div>

@@ -1,0 +1,29 @@
+- var location = ''
+- var images = location + 'svg'
+
+
+extends index
+
+block content
+    include includes/header
+    .main
+      .main-container.container
+        include includes/main-header
+        .main-content.shadowed
+          .notifications
+            include includes/follow-active
+            include includes/comment
+            include includes/request-accepted
+            include includes/reply
+            include includes/follow
+            include includes/request
+            include includes/voted
+            include includes/like
+            include includes/followed
+            include includes/request-declined
+            include includes/compete
+            include includes/reject
+            include includes/posted
+            
+    include includes/footer
+  

@@ -1,0 +1,258 @@
+@import "../../scss/_variables";
+@import "../../scss/_functions";
+
+i{
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+i.reply{
+
+}
+i.logo{
+  width: 100%;
+  height: 100%;
+  background-image: url('#{$imagesCssLvl2}/logo.svg');
+}
+i.search{
+  width: em(28);
+  height: em(28);
+  position: relative;
+  top: 2px;
+  background-image: url('#{$imagesCssLvl2}/searchOld.svg');
+}
+i.home{
+  background-image: url('#{$imagesCssLvl2}/homeOld.svg');
+}
+i.add-image{
+  background-image: url('#{$imagesCssLvl2}/photoOld.svg');
+}
+i.bell{
+  background-image: url('#{$imagesCssLvl2}/notificationOld.svg');
+}
+i.friend{
+  background-image: url('#{$imagesCssLvl2}/friendOld.svg');
+}
+i.settings{
+  background-image: url('#{$imagesCssLvl2}/settingsOld.svg');
+  width: em(32);
+  height: em(32);
+  position: relative;
+  top: em(3);
+}
+i.hide-pass{
+  width: 1.3em;
+  //height: 1.3em;
+  background-image: url('#{$imagesCssLvl2}/eye-grey.svg');
+}
+// i.search{
+//   width: em(36);
+//   height: em(36);
+//   background-image: url('#{$imagesCssLvl2}/search-d.svg');
+// }
+// i.home{
+//   background-image: url('#{$imagesCssLvl2}/home.svg');
+// }
+// i.add-image{
+//   background-image: url('#{$imagesCssLvl2}/photo.svg');
+// }
+// i.bell{
+//   background-image: url('#{$imagesCssLvl2}/notification.svg');
+// }
+// i.friend{
+//   background-image: url('#{$imagesCssLvl2}/friend.svg');
+// }
+// i.settings{
+//   background-image: url('#{$imagesCssLvl2}/settings.svg');
+//   width: em(32);
+//   height: em(32);
+//   position: relative;
+//   top: em(3);
+// }
+i.person{
+  background-image: url('#{$imagesCssLvl2}/person.svg');
+}
+
+i.like{
+  background-image: url('#{$imagesCssLvl2}/like.svg');
+}
+i.feedback{
+  background-image: url('#{$imagesCssLvl2}/reply.svg');
+}
+i.people{
+  background-image: url('#{$imagesCssLvl2}/people.svg');
+}
+i.followers{
+  background-image: url('#{$imagesCssLvl2}/addFr.svg');
+}
+i.dots{
+  width: em(25);
+  height: em(25);
+  background-image: url('#{$imagesCssLvl2}/dots.svg');
+}
+i.reply{
+  background-image: url('#{$imagesCssLvl2}/reply.svg');
+}
+
+i.f-photo{
+  background-image: url('#{$imagesCssLvl2}/f-photo-white.svg');
+}
+i.f-avatar{
+  background-image: url('#{$imagesCssLvl2}/f-avatar-white.svg');
+}
+i.f-home{
+  background-image: url('#{$imagesCssLvl2}/f-home-white.svg');
+}
+i.f-notification{
+  background-image: url('#{$imagesCssLvl2}/f-notification-white.svg');
+}
+.btn-active i.arrowUp{
+  background-image: url('#{$imagesCssLvl2}/arrow-up.svg');
+}
+.btn-active i.arrowLeft{
+  background-image: url('#{$imagesCssLvl2}/arrow-left.svg');
+}
+.btn-active i.arrowRight{
+  background-image: url('#{$imagesCssLvl2}/arrow-right.svg');
+}
+i.arrowUp{
+  background-image: url('#{$imagesCssLvl2}/arrow-up-white.svg');
+}
+i.arrowLeft{
+  background-image: url('#{$imagesCssLvl2}/arrow-left-white.svg');
+    background-position: -3px 0;
+}
+i.arrowLeftWide{
+  background-image: url('#{$imagesCssLvl2}/new-arrowLeftWide.svg');
+}
+i.arrowRightWide{
+  background-image: url('#{$imagesCssLvl2}/new-arrowRightWide.svg');
+}
+i.eye{
+    background-image: url('#{$imagesCssLvl2}/eye.svg');
+}
+i.time{
+    background-image: url('#{$imagesCssLvl2}/time.svg');
+}
+i.arrowRight{
+  background-image: url('#{$imagesCssLvl2}/arrow-right-white.svg');
+    background-position: 3px 0;
+}
+i.person-m{
+    width: 18px;
+    height: 18px;
+    background-image: url('#{$imagesCssLvl2}/person-m.svg');
+}
+i.calend{
+    width: 18px;
+    height: 18px;
+    background-image: url('#{$imagesCssLvl2}/calend.svg');
+}
+i.manyPeople{
+    width: 18px;
+    height: 18px;
+    background-image: url('#{$imagesCssLvl2}/manyPeople.svg');
+}
+i.city{
+    width: 18px;
+    height: 18px;
+    background-image: url('#{$imagesCssLvl2}/city.svg');
+}
+i.person-w{
+    width: 25px;
+    height: 25px;
+    background-image: url('#{$imagesCssLvl2}/person-w.svg');
+}
+i.like-w{
+    width: 25px;
+    height: 25px;
+    background-image: url('#{$imagesCssLvl2}/like-w.svg');
+}
+i.person-avatar{
+    width: 140px;
+    height: 140px;
+    background-image: url('#{$imagesCssLvl2}/person-avatar.svg');
+}
+i.battle-icon-discuss{
+    background-image: url('#{$imagesCssLvl2}/battle-discuss.svg');
+}
+i.battle-icon-reply{
+    background-image: url('#{$imagesCssLvl2}/battle-reply.svg');
+}
+i.battle-icon-price{
+    background-image: url('#{$imagesCssLvl2}/battle-label.svg');
+}
+i.battle-arrow-wide{
+    background-image: url('#{$imagesCssLvl2}/arrowUpWide.svg');
+}
+i.email{
+    background-image: url(#{$imagesCssLvl2}/email-m.svg);
+}
+i.close{
+    width: 15px;
+    height: 15px;
+    background-image: url('#{$imagesCssLvl2}/close.svg');
+}
+i.random{
+    background-image: url('#{$imagesCssLvl2}/new-random.svg');
+}
+i.arrow-down-triangle{
+    background-image: url('#{$imagesCssLvl2}/new-triangle-arrowDown.svg');
+}
+i.dollar{
+    background-image: url(#{$imagesCssLvl2}/new-dollar.svg);
+}
+i.dollar-w{
+    background-image: url(#{$imagesCssLvl2}/new-dollar-w.svg);
+}
+i.fb{
+     background-image: url(#{$imagesCssLvl2}/fb.svg);
+}
+i.vk{
+     background-image: url(#{$imagesCssLvl2}/vk.svg);
+}
+i.tw{
+     background-image: url(#{$imagesCssLvl2}/twitter.svg);
+}
+i.instagram{
+     background-image: url(#{$imagesCssLvl2}/instagram.svg);
+}
+i.star{
+    background-image: url(#{$imagesCssLvl2}/star.svg);
+}
+i.lock{
+    background-image: url(#{$imagesCssLvl2}/lock-m.svg);
+}
+i.sync{
+    background-image: url(#{$imagesCssLvl2}/sync-m.svg);
+}
+i.vk-b{background-image: url(#{$imagesCssLvl2}/vk-b.svg);}
+i.fb-b{background-image: url(#{$imagesCssLvl2}/fb-b.svg);}
+i.tw-b{background-image: url(#{$imagesCssLvl2}/twitter-b.svg);}
+i.instagram-b{background-image: url(#{$imagesCssLvl2}/instagram-b.svg);}
+i.basket{background-image: url(#{$imagesCssLvl2}/new-remove.svg);}
+i.exit{background-image: url(#{$imagesCssLvl2}/new-exit.svg);}
+i.message{background-image: url(#{$imagesCssLvl2}/new-mail.svg);}
+
+i.copy{
+  background-image: url(#{$imagesCssLvl2}/new-copy.svg);
+}
+
+
+
+.comment-like i.like, .openPhoto-box-body-footer-buttons-item i.like{
+  background-image: url('#{$imagesCssLvl2}/like-m.svg');
+}
+.comment-like.active i.like, .openPhoto-box-body-footer-buttons-item.active i.like{
+  background-image: url('#{$imagesCssLvl2}/like.svg');
+}
+.openPhoto-box-body-footer-buttons-item i.copy{
+  background-image: url(#{$imagesCssLvl2}/new-copy-m.svg);
+}
+.openPhoto-box-body-footer-buttons-item.active i.copy{
+  background-image: url(#{$imagesCssLvl2}/new-copy.svg);
+}
+
+

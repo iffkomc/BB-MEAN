@@ -1,0 +1,97 @@
+script $(document).ready(function(){$('body').addClass('settings');});
+//include includes/header
+.main
+    .main-container.container
+        <div ui-view></div>
+        .main-content.shadowed.container-max
+            .settings-box.cf(ng-class="{'settings-edit': isEdit}")
+                .settings-fields
+                    h2 {{locale.settings}}
+                    .box
+                        .settings-fields__name
+                            i.person-m
+                            span(ng-hide="isEdit") {{name}}
+                            input(ng-show="isEdit" ng-model="name" type="text" placeholder="Name and surname")
+                        .settings-fields__login
+                            i.person-m
+                            span(ng-hide="isEdit") {{username}}
+                            input(ng-show="isEdit" ng-model="username" type="text" placeholder="Username")
+                        .settings-fields__email
+                            i.email
+                            span(ng-hide="isEdit") {{email}}
+                            input(ng-show="isEdit" ng-model="email" type="text" placeholder="Email")
+                        .settings-fields__password
+                            i.lock
+                            span(ng-hide="isEdit") {{password}}
+                            input(ng-show="isEdit" ng-model="password" type="password" placeholder="Password")
+                        .settings-fields__sync(ng-hide="isEdit")
+                            i.sync
+                            span {{locale.sync}}:
+                            ul.cf
+                                li
+                                    a(href="/auth/vkontakte")
+                                        i.vk-b
+                                li
+                                    a(href="/auth/facebook")
+                                        i.fb-b
+                                li
+                                    a(href="/auth/twitter")
+                                        i.tw-b
+                                //li
+                                //    a(href="/auth/instagram")
+                                //        i.instagram-b
+                
+                .information-fields
+                    h2 {{locale.info}}
+                    .box
+                        .information-fields__date
+                            i.calend
+                            span
+                                |  {{locale.dateBirth}}:
+                                strong(ng-hide="isEdit")  {{birth.day + '.' + birth.month + '.' + birth.year}}
+                                input(ng-show="isEdit" type="text" ng-model="birth.day")
+                                input(ng-show="isEdit" type="text" ng-model="birth.month")
+                                input(ng-show="isEdit" type="text" ng-model="birth.year")
+                        .information-fields__city
+                            div
+                                i.city
+                                span 
+                                    | {{locale.city}}:
+                                    strong(ng-hide="isEdit") 
+                                        | {{city}}
+                            select(ng-show="isEdit" ng-model="city")
+                                option(value="kiev") Kiev
+                                option(value="lviv") Lviv
+                                option(value="odessa") Odessa
+                                option(value="donetsk") Donetsk
+                                option(value="kharkov") Kharkov
+                        .information-fields__lang
+                            span
+                                | {{locale.language}}:
+                                strong(ng-hide="isEdit")
+                                    |  {{lang}}
+                            select(ng-show="isEdit" ng-model="lang" ng-change="changeLang(lang)")
+                                option(value="EN") english
+                                option(value="RU") russian
+                        .information-fields__about(ng-class="{'edit-aboutMe': isEdit}")
+                            i.person-m
+                            span(ng-hide="isEdit") 
+                                | {{locale.about}}:
+                                strong
+                                    |  {{about}}
+                            textarea(ng-show="isEdit" name="", cols="30", rows="10" placeholder="About me" ng-model="about")
+
+                        .information-fields__delete(ng-click="delete()" ng-hide="isEdit")
+                            i.basket
+                            span 
+                                | {{locale.deleteProfile}}
+                        .information-fields__exit(ng-click="logout()" ng-hide="isEdit")
+                            i.exit
+                            span
+                                | {{locale.exit}}
+                    div.text-center-mobile
+                        a.btn-settings(ng-hide="isEdit" href="" ng-click="isEdit = true") {{locale.edit}}
+                        a.btn-settings(ng-show="isEdit" href="" ng-click="save()") Apply
+//include includes/footer
+
+  

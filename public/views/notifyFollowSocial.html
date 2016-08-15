@@ -1,0 +1,16 @@
+<a ng-href="#/{{user.username}}" class="notification__photo">
+    <img ng-src="{{'/uploads/' + (user.avatarName || 'default') + '.jpg'}}" alt="" class="notification-photo__item">
+</a>
+<div class="notification__description">
+    Your friend <span>from
+    <span ng-if="notify.status == 'FB'">"facebook"</span>
+    <span ng-if="notify.status == 'TW'">"twitter"</span>
+    <span ng-if="notify.status == 'VK'">"vkontakte"</span>
+
+    is using Burbl as </span>
+    <a ng-href="#/{{user.username}}">{{user.name || user.username}}</a>
+
+    <a ng-click="follow(user.username)" class="notification__follow btn btn-blue btn-active btn-vc" ng-show="user.followers.indexOf(userOwner.username) < 0">Follow</a>
+    <a ng-click="follow(user.username)" class="notification__follow btn btn-blue btn-vc" ng-hide="user.followers.indexOf(userOwner.username) < 0">Followed</a>
+
+</div>

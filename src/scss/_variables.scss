@@ -1,0 +1,13 @@
+$location: &;
+
+// development
+$imagesCssLvl1: '../img';
+$imagesCssLvl2: '../../img';
+$imagesCssLvl3: '../../../img';
+$fonts: '../fonts';
+
+// production
+//$imagesCssLvl1: './../../../img';
+//$imagesCssLvl2: './../../../img';
+//$imagesCssLvl3: './../../../img';
+//$fonts: '../../fonts';

@@ -1,0 +1,24 @@
+<div class="popup share">
+    <div class="popup-box share-box">
+        <div class="share-box__header">
+            <div class="header-container container cf">
+                <div class="header-search__box">
+                    <a href="" ng-click="closePopup()" class="header-reply__link"> <i class="reply"></i></a>
+                </div>
+                <div class="header-menu">
+                    <ul class="header-menu__nav cf">
+                        <li class="header-menu__settings header-menu__item"><a href="/#/settings" class="header-menu-item__link"><i class="settings"></i></a></li>
+                    </ul>
+                </div><a href="" class="header-logo"><i class="logo"></i></a></div>
+        </div>
+        <div class="share-box__body">
+            <div class="share-box-body__body">
+                <h2 class="share-box-body-body__heading">Share account</h2>
+                <ul class="share-box-body-body__sources">
+                    <li class="share-box-body-body__sourceItem"><a href="http://vk.com/share.php?url=http://burbl.co/%23/{{username}}" target="_blank" rel="nofollow"><i class="vk"></i><span>vk.com</span></a></li>
+                    <li class="share-box-body-body__sourceItem"><a ng-href="https://www.facebook.com/sharer/sharer.php?u=burbl.co/%23/{{username}}&t=Оцени%20мой%20стиль%20в%20Burbl" target="_blank" rel="nofollow"><i class="fb"></i><span>facebook.com</span></a></li>
+                    <li class="share-box-body-body__sourceItem"><a ng-href="https://twitter.com/intent/tweet?text=Оцени%20мой%20стиль%20в%20Burbl&url=http://burbl.co/%23/{{username}}" target="_blank" rel="nofollow"><i class="tw"></i><span>twitter.com</span></a></li>
+                </ul><a href="" class="share-box__close" ui-sref="user">Close</a></div>
+        </div>
+    </div>
+</div>
